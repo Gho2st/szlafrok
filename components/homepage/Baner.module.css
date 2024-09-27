@@ -79,6 +79,7 @@
 @media (max-width: 600px) {
   .baner__text__container {
     width: 90%;
+    padding: 2rem 6%;
   }
   .baner__container::before {
     background-size: 170%;

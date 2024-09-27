@@ -13,7 +13,7 @@ export default function Contact() {
           <h2>Skontaktuj się z nami</h2>
           <form>
             <div>
-              <label for="name">Imie i nazwisko:</label>
+              <label htmlFor="name">Imie i nazwisko:</label>
               <input
                 type="text"
                 id="name"
@@ -21,7 +21,7 @@ export default function Contact() {
               ></input>
             </div>
             <div>
-              <label for="email">Adres e-mail:</label>
+              <label htmlFor="email">Adres e-mail:</label>
               <input
                 type="email"
                 id="email"
@@ -29,14 +29,16 @@ export default function Contact() {
               ></input>
             </div>
             <div>
-              <label for="message">Wiadomość:</label>
+              <label htmlFor="message">Wiadomość:</label>
               <input
                 type="textarea"
                 id="message"
                 placeholder="Twoja wiadomość"
               ></input>
             </div>
-            <div className={classes.contact__container__form__button__container}>
+            <div
+              className={classes.contact__container__form__button__container}
+            >
               <ButtonSubmit text="Wyślij" background="#664343" color="white" />
             </div>
           </form>
