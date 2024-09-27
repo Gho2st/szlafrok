@@ -23,14 +23,13 @@
 
 .description {
   margin-top: 1rem;
-  color: #767573;
   font-size: 1.1rem;
   line-height: 1.5rem;
 }
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .buttonContainer a button {
@@ -128,7 +127,7 @@
   .header p {
     width: 75%;
   }
-  .container h2 {
-    font-size: 1.6rem;
+  .review {
+    padding: 2rem 1rem;
   }
 }

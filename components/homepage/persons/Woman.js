@@ -1,27 +1,38 @@
+"use client";
 import Image from "next/image";
 import classes from "./Woman.module.css";
 import Button from "@/components/UI/Button";
 import SliderComponent from "@/components/UI/Slider";
+import { useState, useEffect } from "react";
 
 export default function Woman() {
-  const images = [
-    {
-      src: "/baner.jpeg",
-      alt: "Wnętrze Żłobka Wesołe Wygibasy na ulicy Ślicznej w Krakowie, placówka dla dzieci",
-    },
-    {
-      src: "/baner.jpeg",
-      alt: "Sala zabaw Żłobka Wesołe Wygibasy na Ślicznej w Krakowie",
-    },
-    {
-      src: "/baner.jpeg",
-      alt: "Nowoczesne wnętrze Żłobka na ulicy Ślicznej w Krakowie",
-    },
-    {
-      src: "/baner.jpeg",
-      alt: "Zielony plac zabaw Żłobka Wesołe Wygibasy w Krakowie na Ślicznej",
-    },
-  ];
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Function to fetch images
+  const fetchImages = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetch(`/api/gallery/get-gallery`);
+      if (!response.ok) {
+        throw new Error("Wystąpił błąd podczas wczytywania galerii");
+      }
+      const data = await response.json();
+      console.log(data);
+      setImages(data);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Use useEffect to fetch images on mount
+  useEffect(() => {
+    fetchImages();
+  }, []);
 
   return (
     <>
@@ -60,7 +71,14 @@ export default function Woman() {
         </div>
       </div>
       <div className={classes.gallery__container}>
-        <SliderComponent images={images} />
+        {loading && <p>Ładowanie obrazów...</p>}
+        {error && <p className={classes.error}>{error}</p>}
+        {!loading && !error && images.length > 0 && (
+          <SliderComponent images={images} />
+        )}
+        {!loading && !error && images.length === 0 && (
+          <p>Brak obrazów do wyświetlenia.</p>
+        )}
       </div>
     </>
   );
