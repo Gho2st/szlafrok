@@ -15,7 +15,9 @@ export default function Woman() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/api/gallery/get-gallery`);
+      const response = await fetch(
+        `/api/gallery/get-gallery/szlafroki-damskie`
+      );
       if (!response.ok) {
         throw new Error("Wystąpił błąd podczas wczytywania galerii");
       }

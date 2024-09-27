@@ -11,12 +11,16 @@ import Kid from "./persons/Kid";
 import { BsArrowLeftSquare } from "react-icons/bs";
 import Slider from "react-slick";
 import { IoIosArrowForward } from "react-icons/io";
+import WomanPijamas from "./persons/WomanPijamas";
+import WomanNightGown from "./persons/WomanNightGown";
 
 export default function Service() {
   // Użycie stanów dla zarządzania widocznością sekcji
   const [isWomanBathrobe, setIsWomanBathrobe] = useState(false);
   const [isManBathrobe, setIsManBathrobe] = useState(false);
-  const [isKidBathrobe, setIsKidBathrobe] = useState(false);
+  const [isKids, setIsKids] = useState(false);
+  const [isWomanPijamas, setIsWomanPijamas] = useState(false);
+  const [isWomanNightgown, setIsWomanNightGown] = useState(false);
 
   // Konfiguracja ustawień slidera
   const carouselSettings = {
@@ -61,12 +65,19 @@ export default function Service() {
         <h2>Nasza oferta</h2>
 
         {/* Sekcja wyboru oferty */}
-        {!isWomanBathrobe && !isManBathrobe && !isKidBathrobe ? (
+        {!isWomanBathrobe &&
+        !isManBathrobe &&
+        !isKids &&
+        !isWomanPijamas &&
+        !isWomanNightgown ? (
           <div className={classes.service__content__container}>
             <Slider {...carouselSettings} className={classes.slider}>
               {/* Szlafroki damskie */}
               <div className={classes.service__item__container}>
-                <div className={classes.service__item__image__container}>
+                <div
+                  className={classes.service__item__image__container}
+                  onClick={() => setIsWomanBathrobe(true)}
+                >
                   <Image
                     src="/baner.jpeg"
                     alt="Szlafroki damskie"
@@ -85,7 +96,10 @@ export default function Service() {
 
               {/* Szlafroki dziecięce */}
               <div className={classes.service__item__container}>
-                <div className={classes.service__item__image__container}>
+                <div
+                  className={classes.service__item__image__container}
+                  onClick={() => setIsKids(true)}
+                >
                   <Image
                     src="/szlafroki-i-pizamy-dla-dzieci.jpg"
                     alt="Szlafroki i pizamy dziecięce"
@@ -94,10 +108,7 @@ export default function Service() {
                     layout="responsive"
                   />
                 </div>
-                <div
-                  className={classes.button}
-                  onClick={() => setIsKidBathrobe(true)}
-                >
+                <div className={classes.button} onClick={() => setIsKids(true)}>
                   <h3>Szlafroki i Pizamy dziecięce</h3>
                 </div>
               </div>
@@ -126,7 +137,10 @@ export default function Service() {
 
               {/* Piżamy damskie */}
               <div className={classes.service__item__container}>
-                <div className={classes.service__item__image__container}>
+                <div
+                  className={classes.service__item__image__container}
+                  onClick={() => setIsWomanPijamas(true)}
+                >
                   <Image
                     src="/pizama-damska.jpg"
                     alt="Piżamy damskie"
@@ -135,13 +149,19 @@ export default function Service() {
                     layout="responsive"
                   />
                 </div>
-                <div className={classes.button}>
+                <div
+                  className={classes.button}
+                  onClick={() => setIsWomanPijamas(true)}
+                >
                   <h3>Piżamy Damskie</h3>
                 </div>
               </div>
               {/* Koszule Nocne */}
               <div className={classes.service__item__container}>
-                <div className={classes.service__item__image__container}>
+                <div
+                  className={classes.service__item__image__container}
+                  onClick={() => setIsWomanNightGown(true)}
+                >
                   <Image
                     src="/koszula-nocna.jpg"
                     alt="Szlafroki damskie"
@@ -152,7 +172,7 @@ export default function Service() {
                 </div>
                 <div
                   className={classes.button}
-                  onClick={() => setIsWomanBathrobe(true)}
+                  onClick={() => setIsWomanNightGown(true)}
                 >
                   <h3>Koszule Nocne</h3>
                 </div>
@@ -166,8 +186,10 @@ export default function Service() {
               className={classes.backButton}
               onClick={() => {
                 setIsWomanBathrobe(false);
-                setIsKidBathrobe(false);
+                setIsWomanPijamas(false);
+                setIsKids(false);
                 setIsManBathrobe(false);
+                setIsWomanNightGown(false);
               }}
             >
               <BsArrowLeftSquare />
@@ -176,7 +198,9 @@ export default function Service() {
             {/* Logika wyświetlania wybranego komponentu */}
             {isWomanBathrobe && <Woman />}
             {isManBathrobe && <Men />}
-            {isKidBathrobe && <Kid />}
+            {isKids && <Kid />}
+            {isWomanPijamas && <WomanPijamas />}
+            {isWomanNightgown && <WomanNightGown />}
             {/* Można tutaj dodać więcej sekcji dla mężczyzn i dzieci */}
           </div>
         )}

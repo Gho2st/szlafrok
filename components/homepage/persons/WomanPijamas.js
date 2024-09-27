@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import classes from "./Kid.module.css";
+import classes from "./WomanPijamas.module.css";
 import Button from "@/components/UI/Button";
 import SliderComponent from "@/components/UI/Slider";
 import { useState, useEffect } from "react";
 
-export default function Kids() {
+export default function WomanPijamas() {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -15,9 +15,7 @@ export default function Kids() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(
-        `/api/gallery/get-gallery/kids`
-      );
+      const response = await fetch(`/api/gallery/get-gallery/pizamy-damskie`);
       if (!response.ok) {
         throw new Error("Wystąpił błąd podczas wczytywania galerii");
       }
@@ -40,7 +38,7 @@ export default function Kids() {
     <>
       <div className={classes.container}>
         <div className={classes.text__container}>
-          <h3>Piżamy i szlafroki dziecięce</h3>
+          <h3>Piżamy damskie</h3>
           <p>
             Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
             proponujemy również inne modele- od polarowych, z weluru (na guziki

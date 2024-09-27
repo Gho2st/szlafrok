@@ -21,8 +21,6 @@
   justify-content: center;
   flex-direction: column;
   width: 75%;
-  font-size: 1.2rem;
-  line-height: 2.3rem;
 }
 
 .about__container__text span {
@@ -32,6 +30,8 @@
 
 .about__container__text p {
   margin-bottom: 2rem;
+  line-height: 2.3rem;
+  font-size: 1.2rem;
 }
 
 .firstp {
@@ -59,7 +59,7 @@
 }
 
 @media (max-width: 1200px) {
-  .about__container__text {
+  .about__container__text p {
     line-height: 2rem;
     font-size: 1.1rem;
   }
@@ -95,5 +95,8 @@
 @media (max-width: 600px) {
   .about__image__container {
     width: 100%;
+  }
+  .about__content__container {
+    gap: 3.5rem;
   }
 }

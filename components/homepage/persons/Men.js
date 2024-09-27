@@ -1,33 +1,44 @@
+"use client";
 import Image from "next/image";
-import classes from "./Men.module.css";
+import classes from "./Woman.module.css";
 import Button from "@/components/UI/Button";
 import SliderComponent from "@/components/UI/Slider";
+import { useState, useEffect } from "react";
 
-export default function Men() {
-  const images = [
-    {
-      src: "/baner.jpeg",
-      alt: "Wnętrze Żłobka Wesołe Wygibasy na ulicy Ślicznej w Krakowie, placówka dla dzieci",
-    },
-    {
-      src: "/baner.jpeg",
-      alt: "Sala zabaw Żłobka Wesołe Wygibasy na Ślicznej w Krakowie",
-    },
-    {
-      src: "/baner.jpeg",
-      alt: "Nowoczesne wnętrze Żłobka na ulicy Ślicznej w Krakowie",
-    },
-    {
-      src: "/baner.jpeg",
-      alt: "Zielony plac zabaw Żłobka Wesołe Wygibasy w Krakowie na Ślicznej",
-    },
-  ];
+export default function Woman() {
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Function to fetch images
+  const fetchImages = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const response = await fetch(`/api/gallery/get-gallery/szlafroki-meskie`);
+      if (!response.ok) {
+        throw new Error("Wystąpił błąd podczas wczytywania galerii");
+      }
+      const data = await response.json();
+      console.log(data);
+      setImages(data);
+    } catch (error) {
+      setError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Use useEffect to fetch images on mount
+  useEffect(() => {
+    fetchImages();
+  }, []);
 
   return (
     <>
       <div className={classes.container}>
         <div className={classes.text__container}>
-          <h3>Szlafroki Męskie</h3>
+          <h3>Szlafroki męskie</h3>
           <p>
             Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
             proponujemy również inne modele- od polarowych, z weluru (na guziki
@@ -52,7 +63,7 @@ export default function Men() {
 
         <div className={classes.image__container}>
           <Image
-            src={"/meski.jpg"}
+            src={"/szlafrok-meski.jpg"}
             width={100}
             height={100}
             layout="responsive"
@@ -60,7 +71,14 @@ export default function Men() {
         </div>
       </div>
       <div className={classes.gallery__container}>
-        <SliderComponent images={images} />
+        {loading && <p>Ładowanie obrazów...</p>}
+        {error && <p className={classes.error}>{error}</p>}
+        {!loading && !error && images.length > 0 && (
+          <SliderComponent images={images} />
+        )}
+        {!loading && !error && images.length === 0 && (
+          <p>Brak obrazów do wyświetlenia.</p>
+        )}
       </div>
     </>
   );

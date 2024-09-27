@@ -78,7 +78,13 @@
   }
   .contact__container h2,
   .contact__container h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .contact__info__item li {
+    font-size: 1rem;
   }
 }

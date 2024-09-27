@@ -9,15 +9,17 @@ const s3Client = new S3Client({
   },
 });
 
-export async function GET(request) {
+export async function GET(request, { params }) {
+  const pathSegments = params.path;
   console.log("tutaj api get gallery");
   const bucketName = "szlafroki";
+  const prefix = pathSegments.join("/") + "/";
   const prelink = "https://szlafroki.s3.eu-central-1.amazonaws.com/";
 
   try {
     const commandParams = {
       Bucket: bucketName,
-      Prefix: "szlafroki-damskie/",
+      Prefix: prefix,
       Delimiter: "/", // Use delimiter to separate folders if needed
     };
 
