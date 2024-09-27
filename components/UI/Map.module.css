@@ -1,0 +1,6 @@
+.map__container iframe {
+  width: 100%;
+  border: 0;
+  height: 550px;
+  display: block;
+}

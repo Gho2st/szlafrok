@@ -1,0 +1,33 @@
+:root {
+  --background-dark: rgb(37, 37, 37);
+  --background-light: rgb(248, 249, 250);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #664343 !important;
+  font-size: 1.5rem !important;
+}
+
+@media (max-width: 600px) {
+  .slick-prev:before,
+  .slick-next:before {
+    display: none;
+  }
+}

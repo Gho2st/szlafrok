@@ -1,0 +1,79 @@
+.contact__container_wrapper {
+  padding: 7rem 9%;
+}
+
+.contact__container {
+  display: flex;
+  gap: 5rem;
+}
+
+.contact__container h2,
+.contact__container h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+}
+
+.contact__form__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contact__form__container form input {
+  padding: 0.8rem 1rem;
+  border: 1px solid rgb(225, 225, 225);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 0.3rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+
+.contact__form__container form input::placeholder {
+  font-size: 1rem;
+}
+
+.contact__info__container {
+  width: 100%;
+}
+
+.contact__info__container ul {
+  list-style-type: none;
+}
+
+.contact__info__item {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.contact__info__item svg {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.contact__info__item li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.contact__container__form__button__container {
+  margin-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .contact__container_wrapper {
+    padding: 4rem 9%;
+  }
+  .contact__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .contact__container h2,
+  .contact__container h3 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+}

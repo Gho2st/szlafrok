@@ -1,0 +1,20 @@
+.button__container {
+  display: inline;
+}
+
+.button__container button {
+  background: white;
+  border: 0rem;
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  transition: all 0.2s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.button__container button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}

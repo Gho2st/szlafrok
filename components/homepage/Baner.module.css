@@ -1,0 +1,92 @@
+.baner__container {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.baner__container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42)),
+    url("/baner.jpeg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.baner__text__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.56);
+  border-radius: 2rem;
+  color: white;
+  padding: 4rem 6%;
+  z-index: 2;
+}
+
+.baner__text__container span {
+  font-size: 3.8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.baner__text__container h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 1.85rem;
+  font-weight: 200;
+  text-align: center;
+}
+
+.baner__buttons__container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+@media (max-width: 1200px) {
+  .baner__text__container span {
+    font-size: 3rem;
+  }
+  .baner__text__container h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .baner__text__container span {
+    font-size: 2.5rem;
+  }
+  .baner__text__container h1 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.4rem;
+  }
+  .baner__text__container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .baner__text__container {
+    width: 90%;
+  }
+  .baner__container::before {
+    background-size: 170%;
+    background-repeat: no-repeat;
+    background-position: top;
+    filter: blur(2px);
+  }
+  .baner__buttons__container {
+    margin-top: 2rem;
+  }
+}

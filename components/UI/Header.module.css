@@ -1,0 +1,16 @@
+.header__container {
+  color: #664343;
+}
+
+.header__container h2 {
+  font-size: 2.5rem;
+}
+
+.header__container::after {
+  content: "";
+  display: block;
+  margin-top: 1rem;
+  height: 2px;
+  width: 30%;
+  background: #664343;
+}
