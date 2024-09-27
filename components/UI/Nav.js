@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
+import { motion } from "framer-motion"; // Import Framer Motion
 import classes from "./Nav.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -37,7 +38,11 @@ export default function Nav() {
         </div>
       </div>
 
-      <div
+      {/* Framer Motion for animated menu */}
+      <motion.div
+        initial={{ y: -100, opacity: 0 }} // Starting from outside the screen
+        animate={menuOpen ? { y: 0, opacity: 1 } : { y: -100, opacity: 0 }} // Animate in or out
+        transition={{ duration: 0.5 }} // Control speed of animation
         className={`${classes.open__menu__container} ${
           menuOpen ? classes.active : ""
         }`}
@@ -49,7 +54,7 @@ export default function Nav() {
           <li>Dojazd</li>
           <li>o Firmie</li>
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 }

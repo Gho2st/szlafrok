@@ -87,8 +87,8 @@ export default function Service() {
               <div className={classes.service__item__container}>
                 <div className={classes.service__item__image__container}>
                   <Image
-                    src="/dziecko.jpg"
-                    alt="Szlafroki dziecięce"
+                    src="/szlafroki-i-pizamy-dla-dzieci.jpg"
+                    alt="Szlafroki i pizamy dziecięce"
                     width={100}
                     height={100}
                     layout="responsive"
@@ -98,7 +98,7 @@ export default function Service() {
                   className={classes.button}
                   onClick={() => setIsKidBathrobe(true)}
                 >
-                  <h3>Szlafroki Dziecięce</h3>
+                  <h3>Szlafroki i Pizamy dziecięce</h3>
                 </div>
               </div>
 
@@ -109,7 +109,7 @@ export default function Service() {
                   className={classes.service__item__image__container}
                 >
                   <Image
-                    src="/meski.jpg"
+                    src="/szlafrok-meski.jpg"
                     alt="Szlafroki męskie"
                     width={100}
                     height={100}
@@ -137,6 +137,24 @@ export default function Service() {
                 </div>
                 <div className={classes.button}>
                   <h3>Piżamy Damskie</h3>
+                </div>
+              </div>
+              {/* Koszule Nocne */}
+              <div className={classes.service__item__container}>
+                <div className={classes.service__item__image__container}>
+                  <Image
+                    src="/koszula-nocna.jpg"
+                    alt="Szlafroki damskie"
+                    width={100}
+                    height={100}
+                    layout="responsive"
+                  />
+                </div>
+                <div
+                  className={classes.button}
+                  onClick={() => setIsWomanBathrobe(true)}
+                >
+                  <h3>Koszule Nocne</h3>
                 </div>
               </div>
             </Slider>

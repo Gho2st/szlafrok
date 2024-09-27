@@ -40,20 +40,12 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  transform: translateY(-100%); /* Początkowa pozycja - poza ekranem */
-  opacity: 0; /* Ukrycie kontenera */
-  transition: transform 0.5s ease, opacity 0.5s ease; /* Animacja przesunięcia i zanikania */
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  background-color: white; /* Dostosuj tło do swojej strony */
+  background-color: white;
   z-index: 100;
-}
-
-.open__menu__container.active {
-  transform: translateY(0); /* Przesunięcie do pierwotnej pozycji */
-  opacity: 1; /* Ujawnienie kontenera */
 }
 
 .open__menu__container ul {
