@@ -84,7 +84,7 @@ export default function Reviews() {
           >
             {rounded === 0 ? 66 : rounded}
           </motion.div>{" "}
-          zadowolonych klientów! Ocena 4.9/5!
+          zadowolonych klientów! Ocena <span>4.9/5</span>!
         </h2>
         <p className={classes.description}>
           Krakowianie cenią sobie nasz sklep z szlafrokami za zaangażowanie i

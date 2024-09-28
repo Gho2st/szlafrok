@@ -60,7 +60,7 @@ export default function Service() {
   };
 
   return (
-    <section className={classes.wrapper}>
+    <section className={classes.wrapper} id="nasza-oferta">
       <div className={classes.service__container}>
         <h2>Nasza oferta</h2>
 

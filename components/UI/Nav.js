@@ -1,4 +1,4 @@
-"use client";
+"use client"; // Klientowy komponent React
 
 import { useState } from "react";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
@@ -14,22 +14,51 @@ export default function Nav() {
     setMenuOpen((prevState) => !prevState);
   };
 
+  const closeMenu = () => {
+    setMenuOpen(false); // Zamyka menu
+  };
+
   return (
     <div className={classes.nav__wrapper}>
       <div className={classes.nav__container}>
         <div className={classes.logo__container}>
-          <Link href="/">
-            <Image src="/logo.jpeg" width={160} height={50} />
+          <Link href="/" onClick={closeMenu}>
+            <Image src="/logo.jpeg" width={160} height={50} alt="Logo firmy" />
           </Link>
         </div>
 
         <div className={classes.menu__list__container}>
           <ul>
-            <li>Strona Główna</li>
-            <li>Kontakt</li>
-            <li>Prezenty</li>
-            <li>Dojazd</li>
-            <li>o Firmie</li>
+            <li>
+              <Link href="/" onClick={closeMenu}>
+                Strona Główna
+              </Link>
+            </li>
+            <li>
+              <Link href="/#kontakt" onClick={closeMenu}>
+                Kontakt
+              </Link>
+            </li>
+            <li>
+              <Link href="/#prezenty" onClick={closeMenu}>
+                Prezenty
+              </Link>
+            </li>
+            <li>
+              <Link href="/#dojazd" onClick={closeMenu}>
+                Dojazd
+              </Link>
+            </li>
+            <li>
+              <Link href="/#nasza-oferta" onClick={closeMenu}>
+                Nasza Oferta
+              </Link>
+            </li>
+            <li>
+              <Link href="/#o-firmie" onClick={closeMenu}>
+                O Firmie
+              </Link>
+            </li>
           </ul>
         </div>
 
@@ -48,11 +77,36 @@ export default function Nav() {
         }`}
       >
         <ul>
-          <li>Strona Główna</li>
-          <li>Kontakt</li>
-          <li>Prezenty</li>
-          <li>Dojazd</li>
-          <li>o Firmie</li>
+          <li>
+            <Link href="/" onClick={closeMenu}>
+              Strona Główna
+            </Link>
+          </li>
+          <li>
+            <Link href="/#kontakt" onClick={closeMenu}>
+              Kontakt
+            </Link>
+          </li>
+          <li>
+            <Link href="/#prezenty" onClick={closeMenu}>
+              Prezenty
+            </Link>
+          </li>
+          <li>
+            <Link href="/#dojazd" onClick={closeMenu}>
+              Dojazd
+            </Link>
+          </li>
+          <li>
+            <Link href="/#nasza-oferta" onClick={closeMenu}>
+              Nasza Oferta
+            </Link>
+          </li>
+          <li>
+            <Link href="/#o-firmie" onClick={closeMenu}>
+              O Firmie
+            </Link>
+          </li>
         </ul>
       </motion.div>
     </div>

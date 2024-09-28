@@ -29,6 +29,11 @@
   font-weight: 500;
 }
 
+.menu__list__container ul li a:hover {
+  cursor: pointer;
+  color: #664343;
+}
+
 .navigation__button {
   display: none;
   z-index: 101;
@@ -46,6 +51,12 @@
   right: 0;
   background-color: white;
   z-index: 100;
+  opacity: 0; /* Początkowo niewidoczne */
+  pointer-events: none; /* Wyłączamy interakcje, gdy menu nie jest aktywne */
+}
+.open__menu__container.active {
+  opacity: 1; /* Włączenie widoczności */
+  pointer-events: all; /* Aktywowanie interakcji, gdy menu jest otwarte */
 }
 
 .open__menu__container ul {

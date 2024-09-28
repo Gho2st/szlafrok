@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 
 export default function Gifts() {
   return (
-    <section className={classes.wrapper}>
+    <section className={classes.wrapper} id='prezenty'>
       <div className={classes.gift__container}>
         <div className={classes.gift__content__container}>
           <div className={classes.gift__container__text}>

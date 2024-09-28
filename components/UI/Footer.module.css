@@ -28,7 +28,7 @@
 }
 
 .footer__info__links ul li:hover {
-  color: #0d6efd;
+  color: #664343;
   cursor: pointer;
 }
 
@@ -49,13 +49,20 @@
   font-size: 1.1rem;
 }
 
+.contact__form__link li:hover {
+  color: #664343;
+}
 .foot {
   margin-top: 1.5rem;
   text-align: center;
 }
 
 .foot a {
-  color: #0d6efd;
+  color: #806666;
+  font-weight: bold;
+}
+.foot a:hover{
+  color: #413333;
 }
 
 @media (max-width: 1200px) {

@@ -16,7 +16,7 @@
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50% 12%;
-  filter: blur(3px);
+  filter: blur(1px);
   z-index: -1;
 }
 

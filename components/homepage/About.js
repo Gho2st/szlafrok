@@ -5,7 +5,7 @@ import Button from "../UI/Button";
 
 export default function About() {
   return (
-    <section className={classes.wrapper}>
+    <section className={classes.wrapper} id='o-firmie'>
       <div className={classes.about__container}>
         <div className={classes.about__content__container}>
           <div className={classes.about__container__text}>
