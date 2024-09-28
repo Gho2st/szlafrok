@@ -23,6 +23,12 @@
   min-height: 520px !important;
 }
 
+@media (max-width: 1200px) {
+  .slider img {
+    width: 100% !important;
+  }
+}
+
 @media (max-width: 700px) {
   .slider {
     margin-top: 1rem;

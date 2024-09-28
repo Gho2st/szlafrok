@@ -57,7 +57,7 @@
     width: 100%;
   }
   .image__container {
-    width: 50%;
+    display: none;
   }
   .text__container h3 {
     font-size: 1.5rem;
@@ -67,9 +67,6 @@
 }
 
 @media (max-width: 600px) {
-  .image__container {
-    width: 100%;
-  }
   .gallery__container {
     margin-top: 3rem;
     text-align: center;
