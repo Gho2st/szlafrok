@@ -24,12 +24,12 @@ export async function POST(request) {
     });
 
     const mailOption = {
-      from: "hukimuki.rezerwacje@gmail.com",
-      to: "hukimukiflorianska@gmail.com",
-      subject: "Email ze strony HukiMuki od klienta",
+      from: "biosite.praca@gmail.com",
+      to: "jestemfajny1244@gmail.com",
+      subject: "Email ze strony SzlafrOK od klienta",
       html: `
         <div style="font-family: Arial, sans-serif; color: #333; padding: 20px;">
-          <h2 style="color: #4CAF50; text-align: center;">Nowa wiadomość od klienta ze strony HukiMuki</h2>
+          <h2 style="color: #4CAF50; text-align: center;">Nowa wiadomość od klienta ze strony SzlafrOK</h2>
           <p style="font-size: 16px; color: #555;">Otrzymałeś wiadomość od klienta:</p>
           <ul style="list-style-type: none; padding: 0;">
             <li style="padding: 10px 0; border-bottom: 1px solid #eee;">
@@ -46,7 +46,7 @@ export async function POST(request) {
             </li>
           </ul>
           <p style="font-size: 14px; color: #888; text-align: center; margin-top: 20px;">
-            <em>Wiadomość wygenerowana automatycznie przez formularz kontaktowy strony HukiMuki.</em>
+            <em>Wiadomość wygenerowana automatycznie przez formularz kontaktowy strony SzlafrOK.</em>
           </p>
         </div>
       `,
