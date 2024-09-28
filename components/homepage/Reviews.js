@@ -89,10 +89,7 @@ export default function Reviews() {
         <p className={classes.description}>
           Krakowianie cenią sobie nasz sklep z szlafrokami za zaangażowanie i
           troskę, jaką okazujemy klientom. Otrzymaliśmy wiele pozytywnych
-          opinii, które są dla nas najlepszą rekomendacją. Zaufanie, jakim
-          obdarzają nas klienci, motywuje nas do nieustannego doskonalenia
-          naszych usług. Dołącz do grona naszych zadowolonych klientów. Sprawdź,
-          co mówią o nas inni!
+          opinii, które są dla nas najlepszą rekomendacją.
         </p>
         <div className={classes.buttonContainer}>
           <Button link="https://g.co/kgs/YMQjzxs" text="Zostaw Opinię" />

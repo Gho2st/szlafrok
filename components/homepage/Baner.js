@@ -14,7 +14,7 @@ export default function Baner() {
         <div className={classes.baner__buttons__container}>
           <Button text="Czytaj Więcej" link="#o-firmie" background="#664343" />
           <Button
-            text="Nasza Oferta"
+            text="Oferta"
             link="#nasza-oferta"
             background="#FFF0D1"
             color="black"
