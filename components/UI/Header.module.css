@@ -1,5 +1,6 @@
 .header__container {
   color: #664343;
+  z-index: 3; /* Wyższy z-index, aby header był nad nakładką */
 }
 
 .header__container h2 {
@@ -18,5 +19,11 @@
 @media (max-width: 900px) {
   .header__container h2 {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .header__container::after {
+    width: 60%;
   }
 }

@@ -34,10 +34,10 @@ export default function Service() {
     initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1224,
+        breakpoint: 1500,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           infinite: true,
         },
       },

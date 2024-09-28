@@ -3,17 +3,38 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  background-image: url("/gift-back.jpg"); /* Upewnij się, że ścieżka jest poprawna */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   min-height: 100vh;
+  position: relative;
+  z-index: 1; /* Aby elementy były na wierzchu nakładki */
+  color: white; /* Jasny kolor tekstu dla lepszej widoczności */
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.63); /* Ciemna nakładka */
+  z-index: 0; /* Nakładka za treścią */
+  filter: blur(0px);
 }
 
 .gift__container {
   padding: 6rem 9%;
+  z-index: 2; /* Aby kontener znajdował się nad nakładką */
 }
 
 .gift__content__container {
   display: flex;
   justify-content: space-between;
   gap: 5rem;
+  z-index: 2; /* Aby elementy były nad nakładką */
 }
 
 .gift__container__text {
@@ -32,6 +53,7 @@
   margin-bottom: 2rem;
   font-size: 1.2rem;
   line-height: 2.3rem;
+  color: white; /* Jasny kolor tekstu */
 }
 
 .firstp {
@@ -49,6 +71,7 @@
   justify-content: center;
   align-items: center;
   width: 30%;
+  z-index: 2; /* Aby obraz był nad nakładką */
 }
 
 .gift__image__container img {
@@ -67,7 +90,6 @@
 
 @media (max-width: 800px) {
   .gift__content__container {
-    display: flex;
     flex-direction: column;
     gap: 7rem;
   }
