@@ -32,16 +32,6 @@ export default function Gifts() {
               />
             </div>
           </div>
-
-          <div className={classes.gift__image__container}>
-            {/* <Image
-              src="/prezent.png"
-              alt="Obrazek szlafroka zapakowanego w prezent"
-              width={100}
-              height={100}
-              layout="responsive"
-            /> */}
-          </div>
         </div>
       </div>
     </section>
