@@ -8,10 +8,8 @@ import Map from "@/components/UI/Map";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Nav />
       <Homepage />
       <Map />
-      <Footer />
     </div>
   );
 }

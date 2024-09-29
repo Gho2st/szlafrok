@@ -18,8 +18,9 @@
 }
 
 .exit__container button svg {
-  color: red;
+  color: olivedrab;
   font-size: 2rem;
+  transition: all 0.3s ease;
 }
 
 .exit__container button svg:hover {
