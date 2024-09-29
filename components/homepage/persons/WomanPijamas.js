@@ -54,7 +54,7 @@ export default function WomanPijamas() {
             <Button text="Kontakt" link="/" />
             <Button
               text="Galeria"
-              link="/"
+              link="/#galeria-pizamy-damskie"
               background="#FFF0D1"
               color="black"
             />
@@ -63,14 +63,14 @@ export default function WomanPijamas() {
 
         <div className={classes.image__container}>
           <Image
-            src={"/baner.jpeg"}
+            src={"/pizama-damska.jpg"}
             width={100}
             height={100}
             layout="responsive"
           />
         </div>
       </div>
-      <div className={classes.gallery__container}>
+      <div className={classes.gallery__container} id="galeria-pizamy-damskie">
         {loading && <p>Ładowanie obrazów...</p>}
         {error && <p className={classes.error}>{error}</p>}
         {!loading && !error && images.length > 0 && (

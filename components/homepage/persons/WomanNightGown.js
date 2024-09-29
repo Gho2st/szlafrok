@@ -15,7 +15,9 @@ export default function WomanNightGown() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/api/gallery/get-gallery/koszule-nocne-damskie`);
+      const response = await fetch(
+        `/api/gallery/get-gallery/koszule-nocne-damskie`
+      );
       if (!response.ok) {
         throw new Error("Wystąpił błąd podczas wczytywania galerii");
       }
@@ -54,7 +56,7 @@ export default function WomanNightGown() {
             <Button text="Kontakt" link="/" />
             <Button
               text="Galeria"
-              link="/"
+              link="/#galeria-koszule-nocne"
               background="#FFF0D1"
               color="black"
             />
@@ -63,14 +65,14 @@ export default function WomanNightGown() {
 
         <div className={classes.image__container}>
           <Image
-            src={"/baner.jpeg"}
+            src={"/koszula-nocna.jpg"}
             width={100}
             height={100}
             layout="responsive"
           />
         </div>
       </div>
-      <div className={classes.gallery__container}>
+      <div className={classes.gallery__container} id="koszule-nocne">
         {loading && <p>Ładowanie obrazów...</p>}
         {error && <p className={classes.error}>{error}</p>}
         {!loading && !error && images.length > 0 && (

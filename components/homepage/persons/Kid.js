@@ -15,9 +15,7 @@ export default function Kids() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(
-        `/api/gallery/get-gallery/kids`
-      );
+      const response = await fetch(`/api/gallery/get-gallery/kids`);
       if (!response.ok) {
         throw new Error("Wystąpił błąd podczas wczytywania galerii");
       }
@@ -56,7 +54,7 @@ export default function Kids() {
             <Button text="Kontakt" link="/" />
             <Button
               text="Galeria"
-              link="/"
+              link="/#galeria-dziecko"
               background="#FFF0D1"
               color="black"
             />
@@ -65,14 +63,14 @@ export default function Kids() {
 
         <div className={classes.image__container}>
           <Image
-            src={"/baner.jpeg"}
+            src={"/szlafroki-i-pizamy-dla-dzieci.jpg"}
             width={100}
             height={100}
             layout="responsive"
           />
         </div>
       </div>
-      <div className={classes.gallery__container}>
+      <div className={classes.gallery__container} id="galeria-dziecko">
         {loading && <p>Ładowanie obrazów...</p>}
         {error && <p className={classes.error}>{error}</p>}
         {!loading && !error && images.length > 0 && (

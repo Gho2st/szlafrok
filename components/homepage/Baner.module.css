@@ -26,6 +26,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.56);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 2rem;
   color: white;
   padding: 4rem 6%;

@@ -9,7 +9,7 @@ export default function Gifts() {
       <div className={classes.gift__container}>
         <div className={classes.gift__content__container}>
           <div className={classes.gift__container__text}>
-            <Header text="Prezenty" color="white" />
+            <Header text="Prezenty" />
             <p className={classes.firstp}>
               Jeżeli nie macie Państwo pomysłu na oryginalny i praktyczny
               prezent- oto komplet szlafroków z ręcznikami lub bez. Zestaw

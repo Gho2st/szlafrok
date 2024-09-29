@@ -31,9 +31,15 @@
   align-items: center;
   width: 25%;
 }
+.image__container img {
+  border-radius: 1rem;
+}
 
 .gallery__container {
-  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
   text-align: center;
 }
 

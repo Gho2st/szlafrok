@@ -34,6 +34,7 @@
   justify-content: center;
   align-items: center;
   gap: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .service__item__image__container {
@@ -47,6 +48,7 @@
   border-radius: 0.6rem;
   min-height: 520px !important;
   object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .button {
@@ -55,6 +57,7 @@
   background: #e7cccc;
   border-radius: 0.6rem;
   transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .button h3 {

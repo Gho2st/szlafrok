@@ -54,7 +54,7 @@ export default function Woman() {
             <Button text="Kontakt" link="/" />
             <Button
               text="Galeria"
-              link="/"
+              link="/#galeria-szlafroki-meskie"
               background="#FFF0D1"
               color="black"
             />
@@ -70,7 +70,7 @@ export default function Woman() {
           />
         </div>
       </div>
-      <div className={classes.gallery__container}>
+      <div className={classes.gallery__container} id="galeria-szlafroki-meskie">
         {loading && <p>Ładowanie obrazów...</p>}
         {error && <p className={classes.error}>{error}</p>}
         {!loading && !error && images.length > 0 && (
