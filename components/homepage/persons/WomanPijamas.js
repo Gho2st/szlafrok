@@ -4,8 +4,9 @@ import classes from "./WomanPijamas.module.css";
 import Button from "@/components/UI/Button";
 import SliderComponent from "@/components/UI/Slider";
 import { useState, useEffect } from "react";
+import { BsArrowLeftSquare } from "react-icons/bs";
 
-export default function WomanPijamas() {
+export default function WomanPijamas(props) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,7 +39,12 @@ export default function WomanPijamas() {
     <>
       <div className={classes.container}>
         <div className={classes.text__container}>
-          <h3>Piżamy damskie</h3>
+          <div className={classes.exit__container}>
+            <button onClick={props.reset}>
+              <BsArrowLeftSquare />
+            </button>
+            <h3>Piżamy Damskie</h3>
+          </div>
           <p>
             Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
             proponujemy również inne modele- od polarowych, z weluru (na guziki

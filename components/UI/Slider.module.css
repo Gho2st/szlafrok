@@ -6,10 +6,9 @@
 }
 
 .container h2 {
-  font-weight: 500;
   font-size: 2.3rem;
   margin-bottom: 2rem;
-  padding-top: 4rem;
+  color: #664343;
 }
 
 .slider {
@@ -19,7 +18,7 @@
 .slider img {
   padding: 1rem;
   border-radius: 2rem;
-  width: 80% !important;
+  width: 90% !important;
   min-height: 520px !important;
 }
 
@@ -37,8 +36,7 @@
     padding-bottom: 0rem;
   }
   .container h2 {
-    font-size: 1.8rem;
-    padding-top: 2rem;
+    font-size: 2rem;
   }
   .slider img {
     padding-right: 0.3rem;

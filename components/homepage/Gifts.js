@@ -23,12 +23,9 @@ export default function Gifts() {
             </p>
             <p>Idealny prezent ślubny dla młodej pary!</p>
             <div className={classes.buttons__container}>
-              <Button text="Dojazd" link="#dojazd" background="#664343" />
               <Button
                 text="Kontakt"
                 link="#kontakt"
-                background="#FFF0D1"
-                color="black"
               />
             </div>
           </div>

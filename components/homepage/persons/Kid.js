@@ -4,8 +4,10 @@ import classes from "./Kid.module.css";
 import Button from "@/components/UI/Button";
 import SliderComponent from "@/components/UI/Slider";
 import { useState, useEffect } from "react";
+import { BsArrowLeftSquare } from "react-icons/bs";
 
-export default function Kids() {
+
+export default function Kid(props) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -38,10 +40,15 @@ export default function Kids() {
     <>
       <div className={classes.container}>
         <div className={classes.text__container}>
-          <h3>Piżamy i szlafroki dziecięce</h3>
+          <div className={classes.exit__container}>
+            <button onClick={props.reset}>
+              <BsArrowLeftSquare />
+            </button>
+            <h3>Szlafroki i piżamy dziecięce</h3>
+          </div>
           <p>
             Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
-            proponujemy również inne modele- od polarowych, z weluru (na guziki
+            proponujemy również inne modele - od polarowych, z weluru (na guziki
             lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte,
             thermofrotte i z tkaniny soft z kapturem lub bez.
           </p>

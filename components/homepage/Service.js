@@ -8,7 +8,6 @@ import { useState } from "react";
 import Woman from "./persons/Woman";
 import Men from "./persons/Men";
 import Kid from "./persons/Kid";
-import { BsArrowLeftSquare } from "react-icons/bs";
 import Slider from "react-slick";
 import { IoIosArrowForward } from "react-icons/io";
 import WomanPijamas from "./persons/WomanPijamas";
@@ -21,6 +20,14 @@ export default function Service() {
   const [isKids, setIsKids] = useState(false);
   const [isWomanPijamas, setIsWomanPijamas] = useState(false);
   const [isWomanNightgown, setIsWomanNightGown] = useState(false);
+
+  function reset() {
+    setIsWomanBathrobe(false);
+    setIsWomanPijamas(false);
+    setIsKids(false);
+    setIsManBathrobe(false);
+    setIsWomanNightGown(false);
+  }
 
   // Konfiguracja ustawień slidera
   const carouselSettings = {
@@ -62,7 +69,7 @@ export default function Service() {
   return (
     <section className={classes.wrapper} id="nasza-oferta">
       <div className={classes.service__container}>
-        <h2>Nasza oferta</h2>
+        <h2 className={classes.service__container__header}>Nasza oferta</h2>
 
         {/* Sekcja wyboru oferty */}
         {!isWomanBathrobe &&
@@ -109,7 +116,7 @@ export default function Service() {
                   />
                 </div>
                 <div className={classes.button} onClick={() => setIsKids(true)}>
-                  <h3>Szlafroki i Pizamy dziecięce</h3>
+                  <h3>Dla Dzieci</h3>
                 </div>
               </div>
 
@@ -182,25 +189,12 @@ export default function Service() {
         ) : (
           /* Sekcja po wybraniu opcji np. szlafroki damskie */
           <div className={classes.person__content__container}>
-            <button
-              className={classes.backButton}
-              onClick={() => {
-                setIsWomanBathrobe(false);
-                setIsWomanPijamas(false);
-                setIsKids(false);
-                setIsManBathrobe(false);
-                setIsWomanNightGown(false);
-              }}
-            >
-              <BsArrowLeftSquare />
-            </button>
-
             {/* Logika wyświetlania wybranego komponentu */}
-            {isWomanBathrobe && <Woman />}
-            {isManBathrobe && <Men />}
-            {isKids && <Kid />}
-            {isWomanPijamas && <WomanPijamas />}
-            {isWomanNightgown && <WomanNightGown />}
+            {isWomanBathrobe && <Woman reset={reset} />}
+            {isManBathrobe && <Men reset={reset} />}
+            {isKids && <Kid reset={reset} />}
+            {isWomanPijamas && <WomanPijamas reset={reset} />}
+            {isWomanNightgown && <WomanNightGown reset={reset} />}
             {/* Można tutaj dodać więcej sekcji dla mężczyzn i dzieci */}
           </div>
         )}

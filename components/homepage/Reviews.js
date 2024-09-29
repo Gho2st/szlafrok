@@ -73,7 +73,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className={classes.wrapper}>
+    <section className={classes.wrapper} id="opinie">
       <div className={classes.container}>
         <h2>
           Ponad{" "}

@@ -12,7 +12,7 @@ export default function Baner() {
           i nie tylko...
         </h1>
         <div className={classes.baner__buttons__container}>
-          <Button text="Czytaj Więcej" link="#o-firmie" background="#664343" />
+          <Button text="Kontakt" link="#kontakt" background="#664343" />
           <Button
             text="Oferta"
             link="#nasza-oferta"

@@ -4,6 +4,29 @@
   justify-content: space-between;
 }
 
+.exit__container {
+  display: flex;
+  gap: 1rem;
+}
+
+.exit__container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  background: var(--background-light);
+}
+
+.exit__container button svg {
+  color: red;
+  font-size: 2rem;
+}
+
+.exit__container button svg:hover {
+  cursor: pointer;
+  color: rgb(211, 1, 1);
+}
+
 .text__container {
   width: 60%;
 }
@@ -74,7 +97,6 @@
 
 @media (max-width: 600px) {
   .gallery__container {
-    margin-top: 3rem;
     text-align: center;
   }
 }

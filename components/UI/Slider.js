@@ -17,7 +17,7 @@ export default function SliderComponent({ images }) {
 
     responsive: [
       {
-        breakpoint: 1224,
+        breakpoint: 1500,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2,

@@ -25,7 +25,7 @@ export default function About() {
               Pamiętaj! Kraków - <span> ul. Starowiślna 19.</span>
             </p>
             <div className={classes.buttons__container}>
-              <Button text="Dojazd" link="#dojazd" background="#664343" />
+              <Button text="Opinie" link="#opinie" background="#664343" />
               <Button
                 text="Kontakt"
                 link="#kontakt"

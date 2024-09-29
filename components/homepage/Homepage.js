@@ -11,9 +11,9 @@ export default function Homepage() {
     <div className={classes.homepage__container}>
       <main>
         <Baner />
-        <About />
         <Service />
         <Gifts />
+        <About />
         <Reviews />
         <Contact />
       </main>
