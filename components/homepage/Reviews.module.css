@@ -68,7 +68,7 @@
   padding: 2rem;
   border-radius: 1.5rem;
   text-align: center;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
