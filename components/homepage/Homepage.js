@@ -1,5 +1,5 @@
 import About from "./About";
-import Baner from "./Baner";
+import Baner2 from "./Baner2";
 import Contact from "./Contact";
 import Gifts from "./Gifts";
 import classes from "./Homepage.module.css";
@@ -10,10 +10,10 @@ export default function Homepage() {
   return (
     <div className={classes.homepage__container}>
       <main>
-        <Baner />
+        <Baner2 />
+        <About />
         <Service />
         <Gifts />
-        <About />
         <Reviews />
         <Contact />
       </main>

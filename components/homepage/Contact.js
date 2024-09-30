@@ -168,7 +168,7 @@ export default function Contact() {
           <ul>
             <div className={classes.contact__info__item}>
               <MdOutlineEmail />
-              <li>dominik.jojczyk@gmail.com</li>
+              <li>mbarciewicz@onet.eu</li>
             </div>
             <div className={classes.contact__info__item}>
               <IoLocationOutline />

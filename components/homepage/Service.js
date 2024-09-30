@@ -12,11 +12,13 @@ import Slider from "react-slick";
 import { IoIosArrowForward } from "react-icons/io";
 import WomanPijamas from "./persons/WomanPijamas";
 import WomanNightGown from "./persons/WomanNightGown";
+import MenPijamas from "./persons/MenPijamas";
 
 export default function Service() {
   // Użycie stanów dla zarządzania widocznością sekcji
   const [isWomanBathrobe, setIsWomanBathrobe] = useState(false);
   const [isManBathrobe, setIsManBathrobe] = useState(false);
+  const [isManPijamas, setIsManPijamas] = useState(false);
   const [isKids, setIsKids] = useState(false);
   const [isWomanPijamas, setIsWomanPijamas] = useState(false);
   const [isWomanNightgown, setIsWomanNightGown] = useState(false);
@@ -27,6 +29,7 @@ export default function Service() {
     setIsKids(false);
     setIsManBathrobe(false);
     setIsWomanNightGown(false);
+    setIsManPijamas(false);
   }
 
   // Konfiguracja ustawień slidera
@@ -76,6 +79,7 @@ export default function Service() {
         !isManBathrobe &&
         !isKids &&
         !isWomanPijamas &&
+        !isManPijamas &&
         !isWomanNightgown ? (
           <div className={classes.service__content__container}>
             <Slider {...carouselSettings} className={classes.slider}>
@@ -141,8 +145,29 @@ export default function Service() {
                   <h3>Szlafroki Męskie</h3>
                 </div>
               </div>
+              {/* Piżamy meskie */}
 
-              {/* Piżamy damskie */}
+              <div className={classes.service__item__container}>
+                <div
+                  onClick={() => setIsManPijamas(true)}
+                  className={classes.service__item__image__container}
+                >
+                  <Image
+                    src="/pizama-meska.jpg"
+                    alt="Piżama męska"
+                    width={100}
+                    height={100}
+                    layout="responsive"
+                  />
+                </div>
+                <div
+                  className={classes.button}
+                  onClick={() => setIsManPijamas(true)}
+                >
+                  <h3>Piżamy Męskie</h3>
+                </div>
+              </div>
+
               <div className={classes.service__item__container}>
                 <div
                   className={classes.service__item__image__container}
@@ -192,6 +217,7 @@ export default function Service() {
             {/* Logika wyświetlania wybranego komponentu */}
             {isWomanBathrobe && <Woman reset={reset} />}
             {isManBathrobe && <Men reset={reset} />}
+            {isManPijamas && <MenPijamas reset={reset} />}
             {isKids && <Kid reset={reset} />}
             {isWomanPijamas && <WomanPijamas reset={reset} />}
             {isWomanNightgown && <WomanNightGown reset={reset} />}

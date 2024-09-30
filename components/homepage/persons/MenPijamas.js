@@ -1,13 +1,12 @@
 "use client";
 import Image from "next/image";
-import classes from "./Men.module.css";
+import classes from "./MenPijamas.module.css";
 import Button from "@/components/UI/Button";
 import SliderComponent from "@/components/UI/Slider";
 import { useState, useEffect } from "react";
 import { BsArrowLeftSquare } from "react-icons/bs";
 
-
-export default function Men(props) {
+export default function MenPijamas(props) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -17,7 +16,7 @@ export default function Men(props) {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/api/gallery/get-gallery/szlafroki-meskie`);
+      const response = await fetch(`/api/gallery/get-gallery/pizamy-meskie`);
       if (!response.ok) {
         throw new Error("Wystąpił błąd podczas wczytywania galerii");
       }
@@ -44,7 +43,7 @@ export default function Men(props) {
             <button onClick={props.reset}>
               <BsArrowLeftSquare />
             </button>
-            <h3>Szlafroki i piżamy dziecięce</h3>
+            <h3>Piżamy Męskie</h3>
           </div>
           <p>
             Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
@@ -70,7 +69,7 @@ export default function Men(props) {
 
         <div className={classes.image__container}>
           <Image
-            src={"/szlafrok-meski.jpg"}
+            src={"/pizama-meska.jpeg"}
             width={100}
             height={100}
             layout="responsive"
