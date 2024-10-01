@@ -45,6 +45,11 @@ export default function Nav() {
               </Link>
             </li>
             <li>
+              <Link href="/#opinie" onClick={closeMenu}>
+                Opinie
+              </Link>
+            </li>
+            <li>
               <Link href="/#dojazd" onClick={closeMenu}>
                 Dojazd
               </Link>
@@ -90,6 +95,11 @@ export default function Nav() {
           <li>
             <Link href="/#prezenty" onClick={closeMenu}>
               Prezenty
+            </Link>
+          </li>
+          <li>
+            <Link href="/#opinie" onClick={closeMenu}>
+              Opinie
             </Link>
           </li>
           <li>

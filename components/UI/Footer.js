@@ -27,6 +27,9 @@ export default function Footer() {
                 <Link href="/#prezenty">Prezenty</Link>
               </li>
               <li>
+                <Link href="/#opinie">Opinie</Link>
+              </li>
+              <li>
                 <Link href="/#dojazd">Dojazd</Link>
               </li>
               <li>

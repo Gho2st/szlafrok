@@ -49,14 +49,14 @@ export default function Woman(props) {
           </div>
           <p>
             Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
-            proponujemy również inne modele- od polarowych, z weluru (na guziki
-            lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte,
+            proponujemy również inne modele - od polarowych, z weluru (na guziki
+            lub zamek), cienkich bawełnianych na lato - po kąpielowe frotte,
             thermofrotte i z tkaniny soft z kapturem lub bez.
           </p>
           <p>Wszystkie w bogatej ofercie kolorystycznej.</p>
           <p>
             Do każdego szlafroka można dobrać odpowiednią pidżamę oraz koszulę
-            nocną.!
+            nocną!
           </p>
           <div className={classes.text__buttons__container}>
             <Button text="Kontakt" link="/" />

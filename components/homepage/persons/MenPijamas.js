@@ -46,10 +46,9 @@ export default function MenPijamas(props) {
             <h3>Piżamy Męskie</h3>
           </div>
           <p>
-            Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
-            proponujemy również inne modele- od polarowych, z weluru (na guziki
-            lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte,
-            thermofrotte i z tkaniny soft z kapturem lub bez.
+            Oto przykłady piżam męskich z naszej oferty. Tradycyjne rozpinane na
+            guziki (z bawełny lub satyny), wersja krótka lub długa - w
+            rozmiarach do 5XL.
           </p>
           <p>Wszystkie w bogatej ofercie kolorystycznej.</p>
           <p>

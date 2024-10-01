@@ -6,7 +6,6 @@ import SliderComponent from "@/components/UI/Slider";
 import { useState, useEffect } from "react";
 import { BsArrowLeftSquare } from "react-icons/bs";
 
-
 export default function Men(props) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -44,18 +43,17 @@ export default function Men(props) {
             <button onClick={props.reset}>
               <BsArrowLeftSquare />
             </button>
-            <h3>Szlafroki i piżamy dziecięce</h3>
+            <h3>Szlafroki męskie</h3>
           </div>
           <p>
-            Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
+            Oto przykłady szlafroków męskich z naszej oferty. Oczywiście
             proponujemy również inne modele- od polarowych, z weluru (na guziki
             lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte,
             thermofrotte i z tkaniny soft z kapturem lub bez.
           </p>
           <p>Wszystkie w bogatej ofercie kolorystycznej.</p>
           <p>
-            Do każdego szlafroka można dobrać odpowiednią pidżamę oraz koszulę
-            nocną.!
+            Specjalność sklepu - eleganckie bonżurki w kilku kolorach i wzorach.
           </p>
           <div className={classes.text__buttons__container}>
             <Button text="Kontakt" link="/" />

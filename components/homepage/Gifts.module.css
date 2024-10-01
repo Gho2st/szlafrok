@@ -3,60 +3,36 @@
   justify-content: center;
   align-items: center;
   margin: auto;
-  background-image: url("/gift-back.jpg"); /* Upewnij się, że ścieżka jest poprawna */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   min-height: 100vh;
-  position: relative;
-  z-index: 1; /* Aby elementy były na wierzchu nakładki */
-  color: white; /* Jasny kolor tekstu dla lepszej widoczności */
 }
 
-.wrapper::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Ciemna nakładka */
-  z-index: 0; /* Nakładka za treścią */
-  filter: blur(2px);
-}
-
-.gift__container {
+.about__container {
   padding: 6rem 9%;
-  z-index: 2; /* Aby kontener znajdował się nad nakładką */
 }
 
-.gift__content__container {
+.about__content__container {
   display: flex;
   justify-content: space-between;
-  z-index: 2; /* Aby elementy były nad nakładką */
+  flex-direction: row-reverse;
+  gap: 5rem;
 }
 
-.gift__container__text {
+.about__container__text {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 70%;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 75%;
 }
 
-.gift__container__text span {
+.about__container__text span {
   color: olivedrab;
   font-weight: bold;
 }
 
-.gift__container__text p {
+.about__container__text p {
   margin-bottom: 2rem;
-  font-size: 1.2rem;
   line-height: 2.3rem;
-  color: rgb(0, 0, 0); /* Jasny kolor tekństu */
+  font-size: 1.2rem;
 }
 
 .firstp {
@@ -69,27 +45,59 @@
   gap: 1rem;
 }
 
+.about__image__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: -2000px;
+  width: 50%;
+}
+
+.about__image__container img {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 0.3rem;
+  transform: rotateY(20deg);
+}
+
 @media (max-width: 1200px) {
-  .gift__container__text p {
+  .about__container__text p {
     line-height: 2rem;
     font-size: 1.1rem;
   }
+  .about__image__container {
+    width: 50%;
+  }
 }
 
-@media (max-width: 800px) {
-  .gift__content__container {
+@media (max-width: 900px) {
+  .about__content__container {
+    display: flex;
     flex-direction: column;
+    gap: 7rem;
   }
   .buttons__container {
     margin-top: 0rem;
   }
-
-  .gift__container__text {
-    width: 100%;
-    padding: 2rem 1.5rem;
+  .about__image__container {
+    width: 60%;
+    margin: auto;
   }
+  .about__image__container img {
+    transform: rotateY(0);
+  }
+  .about__container__text {
+    width: 100%;
+  }
+  .about__container {
+    padding: 4rem 9%;
+  }
+}
 
-  .gift__container {
-    padding: 4rem 4%;
+@media (max-width: 600px) {
+  .about__image__container {
+    width: 100%;
+  }
+  .about__content__container {
+    gap: 3.5rem;
   }
 }

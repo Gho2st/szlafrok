@@ -9,7 +9,7 @@ export default function Baner2() {
         <Image src="/logo2.png" width={100} height={100} layout="responsive" />
         <h1>
           SzlafrO.K. - Szlafroki damskie, szlafroki męskie, szlafroki dziecięce,
-          i nie tylko... Kontakt
+          i nie tylko...
         </h1>
       </div>
     </div>

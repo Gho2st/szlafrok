@@ -6,7 +6,6 @@ import SliderComponent from "@/components/UI/Slider";
 import { useState, useEffect } from "react";
 import { BsArrowLeftSquare } from "react-icons/bs";
 
-
 export default function WomanNightGown(props) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -49,15 +48,12 @@ export default function WomanNightGown(props) {
             <h3>Damskie Koszule Nocne</h3>
           </div>
           <p>
-            Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
-            proponujemy również inne modele- od polarowych, z weluru (na guziki
-            lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte,
-            thermofrotte i z tkaniny soft z kapturem lub bez.
+            Oto przykłady damskich koszul nocnych z naszej oferty. Koszule nocne
+            z długim lub krótkim rękawem z bawełny, wiskozy i tkaniny termosoft.
           </p>
           <p>Wszystkie w bogatej ofercie kolorystycznej.</p>
           <p>
-            Do każdego szlafroka można dobrać odpowiednią pidżamę oraz koszulę
-            nocną.!
+            Do każdej koszuli nocncej można dobrać odpowiednią pidżamę oraz szlafrok!
           </p>
           <div className={classes.text__buttons__container}>
             <Button text="Kontakt" link="/" />

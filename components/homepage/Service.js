@@ -105,22 +105,47 @@ export default function Service() {
                 </div>
               </div>
 
-              {/* Szlafroki dziecięce */}
+              {/* PIZAMY DAMSKIE */}
               <div className={classes.service__item__container}>
                 <div
                   className={classes.service__item__image__container}
-                  onClick={() => setIsKids(true)}
+                  onClick={() => setIsWomanPijamas(true)}
                 >
                   <Image
-                    src="/szlafroki-i-pizamy-dla-dzieci.jpg"
-                    alt="Szlafroki i pizamy dziecięce"
+                    src="/pizama-damska.jpg"
+                    alt="Piżamy damskie"
                     width={100}
                     height={100}
                     layout="responsive"
                   />
                 </div>
-                <div className={classes.button} onClick={() => setIsKids(true)}>
-                  <h3>Dla Dzieci</h3>
+                <div
+                  className={classes.button}
+                  onClick={() => setIsWomanPijamas(true)}
+                >
+                  <h3>Piżamy Damskie</h3>
+                </div>
+              </div>
+
+              {/* Koszule Nocne */}
+              <div className={classes.service__item__container}>
+                <div
+                  className={classes.service__item__image__container}
+                  onClick={() => setIsWomanNightGown(true)}
+                >
+                  <Image
+                    src="/koszula-nocna.jpg"
+                    alt="Szlafroki damskie"
+                    width={100}
+                    height={100}
+                    layout="responsive"
+                  />
+                </div>
+                <div
+                  className={classes.button}
+                  onClick={() => setIsWomanNightGown(true)}
+                >
+                  <h3>Koszule Nocne</h3>
                 </div>
               </div>
 
@@ -168,45 +193,22 @@ export default function Service() {
                 </div>
               </div>
 
+              {/* Szlafroki dziecięce */}
               <div className={classes.service__item__container}>
                 <div
                   className={classes.service__item__image__container}
-                  onClick={() => setIsWomanPijamas(true)}
+                  onClick={() => setIsKids(true)}
                 >
                   <Image
-                    src="/pizama-damska.jpg"
-                    alt="Piżamy damskie"
+                    src="/szlafroki-i-pizamy-dla-dzieci.jpg"
+                    alt="Szlafroki i pizamy dziecięce"
                     width={100}
                     height={100}
                     layout="responsive"
                   />
                 </div>
-                <div
-                  className={classes.button}
-                  onClick={() => setIsWomanPijamas(true)}
-                >
-                  <h3>Piżamy Damskie</h3>
-                </div>
-              </div>
-              {/* Koszule Nocne */}
-              <div className={classes.service__item__container}>
-                <div
-                  className={classes.service__item__image__container}
-                  onClick={() => setIsWomanNightGown(true)}
-                >
-                  <Image
-                    src="/koszula-nocna.jpg"
-                    alt="Szlafroki damskie"
-                    width={100}
-                    height={100}
-                    layout="responsive"
-                  />
-                </div>
-                <div
-                  className={classes.button}
-                  onClick={() => setIsWomanNightGown(true)}
-                >
-                  <h3>Koszule Nocne</h3>
+                <div className={classes.button} onClick={() => setIsKids(true)}>
+                  <h3>Dla Dzieci</h3>
                 </div>
               </div>
             </Slider>

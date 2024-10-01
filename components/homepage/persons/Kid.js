@@ -6,7 +6,6 @@ import SliderComponent from "@/components/UI/Slider";
 import { useState, useEffect } from "react";
 import { BsArrowLeftSquare } from "react-icons/bs";
 
-
 export default function Kid(props) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -47,16 +46,12 @@ export default function Kid(props) {
             <h3>Szlafroki i piżamy dziecięce</h3>
           </div>
           <p>
-            Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
-            proponujemy również inne modele - od polarowych, z weluru (na guziki
-            lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte,
-            thermofrotte i z tkaniny soft z kapturem lub bez.
+            Oto przykłady szlafroków i piżam dziecięcych z naszej oferty. Od 8
+            lat do 164 cm wzrostu, w dniach bożonarodzeniowych zestawy piżam dla
+            całej rodziny.
           </p>
           <p>Wszystkie w bogatej ofercie kolorystycznej.</p>
-          <p>
-            Do każdego szlafroka można dobrać odpowiednią pidżamę oraz koszulę
-            nocną.!
-          </p>
+
           <div className={classes.text__buttons__container}>
             <Button text="Kontakt" link="/" />
             <Button

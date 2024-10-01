@@ -46,15 +46,14 @@ export default function WomanPijamas(props) {
             <h3>Piżamy Damskie</h3>
           </div>
           <p>
-            Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
-            proponujemy również inne modele- od polarowych, z weluru (na guziki
-            lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte,
-            thermofrotte i z tkaniny soft z kapturem lub bez.
+            Oto przykłady piżam damskich z naszej oferty. Z bawełny (rozpinane
+            lub nie), wiskozy oraz w dniach zimowych z thermofrotte. Rozmiary od
+            S do 5XL.
           </p>
           <p>Wszystkie w bogatej ofercie kolorystycznej.</p>
           <p>
-            Do każdego szlafroka można dobrać odpowiednią pidżamę oraz koszulę
-            nocną.!
+            Do każdej piżamy można dobrać odpowiedni szlafrok oraz koszulę
+            nocną!
           </p>
           <div className={classes.text__buttons__container}>
             <Button text="Kontakt" link="/" />

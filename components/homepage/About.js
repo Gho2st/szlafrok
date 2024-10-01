@@ -37,7 +37,7 @@ export default function About() {
 
           <div className={classes.about__image__container}>
             <Image
-              src="/sklep.jpg"
+              src="/sklep2.jpeg"
               alt="Sklep obrazek"
               width={100}
               height={100}
