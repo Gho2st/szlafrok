@@ -102,4 +102,7 @@
   .about__content__container {
     gap: 2rem;
   }
+  .firstp {
+    margin-top: 2rem;
+  }
 }
