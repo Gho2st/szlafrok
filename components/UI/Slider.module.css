@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 4rem 0rem;
 }
 
 .container h2 {
