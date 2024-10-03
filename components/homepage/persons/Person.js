@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import classes from "./Men.module.css";
+import classes from "./Person.module.css";
 import Button from "@/components/UI/Button";
 import SliderComponent from "@/components/UI/Slider";
 import { useState, useEffect } from "react";
 import { BsArrowLeftSquare } from "react-icons/bs";
 
-export default function Men(props) {
+export default function Person(props) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -16,7 +16,7 @@ export default function Men(props) {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch(`/api/gallery/get-gallery/szlafroki-meskie`);
+      const response = await fetch(`/api/gallery/get-gallery/${props.which}`);
       if (!response.ok) {
         throw new Error("Wystąpił błąd podczas wczytywania galerii");
       }
@@ -43,23 +43,16 @@ export default function Men(props) {
             <button onClick={props.reset}>
               <BsArrowLeftSquare />
             </button>
-            <h3>Szlafroki męskie</h3>
+            <h3>{props.person}</h3>
           </div>
-          <p>
-            Oto przykłady szlafroków męskich z naszej oferty. Oczywiście
-            proponujemy również inne modele- od polarowych, z weluru (na guziki
-            lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte,
-            thermofrotte i z tkaniny soft z kapturem lub bez.
-          </p>
-          <p>Wszystkie w bogatej ofercie kolorystycznej.</p>
-          <p>
-            Specjalność sklepu - eleganckie bonżurki w kilku kolorach i wzorach.
-          </p>
+          <p>{props.text}</p>
+          <p>{props.text2}</p>
+          <p>{props.text3}</p>
           <div className={classes.text__buttons__container}>
             <Button text="Kontakt" link="/" />
             <Button
               text="Galeria"
-              link="/#galeria-szlafroki-meskie"
+              link={`#galeria-${props.which}`}
               background="#FFF0D1"
               color="black"
             />
@@ -68,14 +61,14 @@ export default function Men(props) {
 
         <div className={classes.image__container}>
           <Image
-            src={"/szlafrok-meski.jpg"}
+            src={`/${props.which}.jpg`}
             width={100}
             height={100}
             layout="responsive"
           />
         </div>
       </div>
-      <div className={classes.gallery__container} id="galeria-szlafroki-meskie">
+      <div className={classes.gallery__container} id={`galeria-${props.which}`}>
         {loading && <p>Ładowanie obrazów...</p>}
         {error && <p className={classes.error}>{error}</p>}
         {!loading && !error && images.length > 0 && (

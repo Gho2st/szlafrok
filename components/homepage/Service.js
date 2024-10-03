@@ -1,18 +1,11 @@
-"use client"; // na samym początku pliku
-
+"use client";
 import "slick-carousel/slick/slick.css"; // Import Slick styles
 import "slick-carousel/slick/slick-theme.css"; // Import Slick theme styles
 import Image from "next/image";
 import classes from "./Service.module.css";
 import { useState } from "react";
-import Woman from "./persons/Woman";
-import Men from "./persons/Men";
-import Kid from "./persons/Kid";
 import Slider from "react-slick";
-import { IoIosArrowForward } from "react-icons/io";
-import WomanPijamas from "./persons/WomanPijamas";
-import WomanNightGown from "./persons/WomanNightGown";
-import MenPijamas from "./persons/MenPijamas";
+import Person from "./persons/Person";
 
 export default function Service() {
   // Użycie stanów dla zarządzania widocznością sekcji
@@ -90,7 +83,7 @@ export default function Service() {
                   onClick={() => setIsWomanBathrobe(true)}
                 >
                   <Image
-                    src="/baner.jpeg"
+                    src="/szlafroki-damskie.jpg"
                     alt="Szlafroki damskie"
                     width={100}
                     height={100}
@@ -112,7 +105,7 @@ export default function Service() {
                   onClick={() => setIsWomanPijamas(true)}
                 >
                   <Image
-                    src="/pizama-damska.jpg"
+                    src="/pizamy-damskie.jpg"
                     alt="Piżamy damskie"
                     width={100}
                     height={100}
@@ -134,7 +127,7 @@ export default function Service() {
                   onClick={() => setIsWomanNightGown(true)}
                 >
                   <Image
-                    src="/koszula-nocna.jpg"
+                    src="/koszule-nocne-damskie.jpg"
                     alt="Szlafroki damskie"
                     width={100}
                     height={100}
@@ -156,7 +149,7 @@ export default function Service() {
                   className={classes.service__item__image__container}
                 >
                   <Image
-                    src="/szlafrok-meski.jpg"
+                    src="/szlafroki-meskie.jpg"
                     alt="Szlafroki męskie"
                     width={100}
                     height={100}
@@ -178,8 +171,8 @@ export default function Service() {
                   className={classes.service__item__image__container}
                 >
                   <Image
-                    src="/pizama-meska.jpg"
-                    alt="Piżama męska"
+                    src="/pizamy-meskie.jpg"
+                    alt="Piżamy męskie"
                     width={100}
                     height={100}
                     layout="responsive"
@@ -200,7 +193,7 @@ export default function Service() {
                   onClick={() => setIsKids(true)}
                 >
                   <Image
-                    src="/szlafroki-i-pizamy-dla-dzieci.jpg"
+                    src="/dla-dzieci.jpg"
                     alt="Szlafroki i pizamy dziecięce"
                     width={100}
                     height={100}
@@ -216,14 +209,69 @@ export default function Service() {
         ) : (
           /* Sekcja po wybraniu opcji np. szlafroki damskie */
           <div className={classes.person__content__container}>
-            {/* Logika wyświetlania wybranego komponentu */}
-            {isWomanBathrobe && <Woman reset={reset} />}
-            {isManBathrobe && <Men reset={reset} />}
-            {isManPijamas && <MenPijamas reset={reset} />}
-            {isKids && <Kid reset={reset} />}
-            {isWomanPijamas && <WomanPijamas reset={reset} />}
-            {isWomanNightgown && <WomanNightGown reset={reset} />}
-            {/* Można tutaj dodać więcej sekcji dla mężczyzn i dzieci */}
+            {isWomanBathrobe && (
+              <Person
+                person="Szlafroki Damskie"
+                which="szlafroki-damskie"
+                text="Oto przykłady szlafroków damskich z naszej oferty. Oczywiście
+                proponujemy również inne modele - od polarowych, z weluru (na guziki
+                lub zamek), cienkich bawełnianych na lato - po kąpielowe frotte,
+                thermofrotte i z tkaniny soft z kapturem lub bez."
+                text2="Wszystkie w bogatej ofercie kolorystycznej."
+                text3="Do każdego szlafroka można dobrać odpowiednią pidżamę oraz koszulę nocną!"
+                reset={reset}
+              />
+            )}
+            {isManBathrobe && (
+              <Person
+                person="Szlafroki męskie"
+                which="szlafroki-meskie"
+                text="Oto przykłady szlafroków męskich z naszej oferty. Oczywiście proponujemy również inne modele- od polarowych, z weluru (na guziki lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte, thermofrotte i z tkaniny soft z kapturem lub bez."
+                text2="Wszystkie w bogatej ofercie kolorystycznej."
+                text3="Specjalność sklepu - eleganckie bonżurki w kilku kolorach i wzorach."
+                reset={reset}
+              />
+            )}
+            {isManPijamas && (
+              <Person
+                person="Piżamy Męskie"
+                which="pizamy-meskie"
+                text="Oto przykłady piżam męskich z naszej oferty. Tradycyjne rozpinane na guziki (z bawełny lub satyny), wersja krótka lub długa - w rozmiarach do 5XL."
+                text2="Wszystkie w bogatej ofercie kolorystycznej."
+                text3="Do każdej piżamy można dobrać odpowiedni szlafrok!"
+                reset={reset}
+              />
+            )}
+            {isKids && (
+              <Person
+                person="Szlafroki i piżamy dziecięce"
+                which="dla-dzieci"
+                text="Oto przykłady szlafroków i piżam dziecięcych z naszej oferty. Od 8 lat do 164 cm wzrostu, w dniach bożonarodzeniowych zestawy piżam dla całej rodziny."
+                text2="Wszystkie w bogatej ofercie kolorystycznej."
+                text3="Dostępne zestawy dla całej rodziny!"
+                reset={reset}
+              />
+            )}
+            {isWomanPijamas && (
+              <Person
+                which="pizamy-damskie"
+                person="Piżamy Damskie"
+                text="Oto przykłady piżam damskich z naszej oferty. Z bawełny (rozpinane lub nie), wiskozy oraz w dniach zimowych z thermofrotte. Rozmiary od S do 5XL."
+                text2="Wszystkie w bogatej ofercie kolorystycznej."
+                text3="Do każdej piżamy można dobrać odpowiedni szlafrok oraz koszulę nocną!"
+                reset={reset}
+              />
+            )}
+            {isWomanNightgown && (
+              <Person
+                which="koszule-nocne-damskie"
+                person="Damskie Koszule Nocne"
+                text="Oto przykłady damskich koszul nocnych z naszej oferty. Koszule nocne z długim lub krótkim rękawem z bawełny, wiskozy i tkaniny termosoft."
+                text2="Wszystkie w bogatej ofercie kolorystycznej."
+                text3="Do każdej koszuli nocncej można dobrać odpowiednią pidżamę oraz szlafrok!"
+                reset={reset}
+              />
+            )}
           </div>
         )}
       </div>
