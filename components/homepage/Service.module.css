@@ -108,6 +108,12 @@
     font-size: 2rem;
     opacity: 0.5;
   }
+  .service__container__header {
+    font-size: 2rem;
+  }
+  .service__container__header::after {
+    width: 50%;
+  }
 }
 
 @media (max-width: 600px) {
@@ -128,9 +134,7 @@
     border-radius: 0.6rem;
     object-fit: cover;
   }
-  .service__container__header {
-    font-size: 2rem;
-  }
+
   .service__container__header::after {
     width: 90%;
   }

@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0rem;
 }
 
 .container h2 {
@@ -26,6 +25,12 @@
 @media (max-width: 1200px) {
   .slider img {
     width: 100% !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .container h2 {
+    font-size: 2rem;
   }
 }
 

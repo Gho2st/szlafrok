@@ -72,13 +72,13 @@
   .about__content__container {
     display: flex;
     flex-direction: column;
-    gap: 7rem;
+    gap: 0rem;
   }
   .buttons__container {
     margin-top: 0rem;
   }
   .about__image__container {
-    width: 60%;
+    width: 100%;
     margin: auto;
   }
   .about__image__container img {
@@ -92,7 +92,7 @@
     padding: 0;
   }
   .about__container__text {
-    padding: 3rem 9%;
+    padding: 4rem 9%;
   }
 }
 
@@ -100,9 +100,7 @@
   .about__image__container {
     width: 100%;
   }
-  .about__content__container {
-    gap: 2rem;
-  }
+ 
   .firstp {
     margin-top: 2rem;
   }
