@@ -1,5 +1,5 @@
 import Image from "next/image";
-import classes from "./Baner2.module.css";
+import classes from "./Baner.module.css";
 import Button from "../UI/Button";
 
 export default function Baner2() {
