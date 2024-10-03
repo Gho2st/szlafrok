@@ -268,7 +268,7 @@ export default function Service() {
                 person="Damskie Koszule Nocne"
                 text="Oto przykłady damskich koszul nocnych z naszej oferty. Koszule nocne z długim lub krótkim rękawem z bawełny, wiskozy i tkaniny termosoft."
                 text2="Wszystkie w bogatej ofercie kolorystycznej."
-                text3="Do każdej koszuli nocncej można dobrać odpowiednią pidżamę oraz szlafrok!"
+                text3="Do każdej koszuli nocncej można dobrać odpowiednią piżamę oraz szlafrok!"
                 reset={reset}
               />
             )}
