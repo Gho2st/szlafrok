@@ -12,7 +12,7 @@ export const metadata = {
   description:
     "Szlafroki Kraków. Od 1990r zapraszamy do naszych specjalistyczego sklepu ze szlafrokami w Krakowie przy ulicy Starowiślnej 19. Oprócz szlafroków w swojej ofercie posiadamy również duży wybór pidżam, koszuli nocnych, ręczników i pościeli.",
   alternates: {
-    canonical: "/",
+    canonical: "https://szlafroki.krakow.pl/",
   },
   robots: {
     index: true,
