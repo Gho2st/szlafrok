@@ -42,14 +42,14 @@
   margin-right: 1rem;
 }
 
-.contact__info__item li {
+.contact__info__item p {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
 }
 
-.contact__form__link li:hover {
+.contact__form__link a:hover {
   color: #664343;
 }
 .foot {

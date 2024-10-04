@@ -49,30 +49,34 @@ export default function Footer() {
           <div>
             <h3>Kontakt</h3>
             <ul>
-              <div className={classes.contact__info__item}>
-                <MdOutlineEmail />
-                <li>mbarciewicz@onet.eu</li>
-              </div>
-              <div className={classes.contact__info__item}>
-                <IoLocationOutline />
-                <li>Starowiślna 19, Kraków</li>
-              </div>
-              <div
-                className={`${classes.contact__info__item} ${classes.contact__form__link}`}
-              >
-                <LuPhone />
-                <li>
+              <li>
+                <div className={classes.contact__info__item}>
+                  <MdOutlineEmail />
+                  <p> mbarciewicz@onet.eu</p>
+                </div>
+              </li>
+              <li>
+                <div className={classes.contact__info__item}>
+                  <IoLocationOutline />
+                  <p>Starowiślna 19, Kraków</p>
+                </div>
+              </li>
+              <li>
+                <div
+                  className={`${classes.contact__info__item} ${classes.contact__form__link}`}
+                >
+                  <LuPhone />
                   <Link href="tel:+48124211860">+48 12 421 18 60 </Link>
-                </li>
-              </div>
-              <div
-                className={`${classes.contact__info__item} ${classes.contact__form__link}`}
-              >
-                <GrContact />
-                <li>
+                </div>
+              </li>
+              <li>
+                <div
+                  className={`${classes.contact__info__item} ${classes.contact__form__link}`}
+                >
+                  <GrContact />
                   <Link href="/#kontakt">Formularz Kontaktowy</Link>
-                </li>
-              </div>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
