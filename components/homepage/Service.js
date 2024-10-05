@@ -226,7 +226,7 @@ export default function Service() {
               <Person
                 person="Szlafroki męskie"
                 which="szlafroki-meskie"
-                text="Oto przykłady szlafroków męskich z naszej oferty. Oczywiście proponujemy również inne modele- od polarowych, z weluru (na guziki lub zamek), cienkich bawełnianych na lato- po kąpielowe frotte, thermofrotte i z tkaniny soft z kapturem lub bez."
+                text="Oto przykłady szlafroków męskich z naszej oferty. Oczywiście proponujemy również inne modele - od kąpielowych (100% bawełna), z weluru bawełnianego, satyny, tkaniny soft."
                 text2="Wszystkie w bogatej ofercie kolorystycznej."
                 text3="Specjalność sklepu - eleganckie bonżurki w kilku kolorach i wzorach."
                 reset={reset}

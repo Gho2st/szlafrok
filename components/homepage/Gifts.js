@@ -19,7 +19,7 @@ export default function Gifts() {
             <p>
               Na życzenie istnieje możliwość wyhaftowania monogramu na
               szlafrokach. <br></br> Komplety pakujemy w specjalnie przygotowane
-              kosze lub pudełka.
+              pudełka.
             </p>
             <p>Idealny prezent ślubny dla młodej pary!</p>
 
