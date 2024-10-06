@@ -92,7 +92,7 @@ export default function Reviews() {
           opinii, które są dla nas najlepszą rekomendacją.
         </p>
         <div className={classes.buttonContainer}>
-          <Button link="https://g.co/kgs/YMQjzxs" text="Zostaw Opinię" />
+          <Button link="https://g.page/r/CcPF4QJuJH_3EBM/review" text="Zostaw Opinię" />
         </div>
         <div className={classes.reviewContainer}>
           <Slider {...settings} className={classes.slider}>

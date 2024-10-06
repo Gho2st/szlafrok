@@ -12,7 +12,7 @@
 
 .baner__text__container {
   position: absolute;
-  top: 85%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 1rem;
@@ -58,6 +58,7 @@
   .baner__text__container {
     width: 85%;
     padding: 2rem 1.5rem;
+    top: 85%;
   }
   .baner__text__container h1 {
     font-size: 1.3rem;

@@ -23,6 +23,20 @@
   width: 70%;
 }
 
+.header__container h1 {
+  color: #664343;
+  font-size: 2rem;
+}
+
+.header__container::after {
+  content: "";
+  display: block;
+  margin-top: 1.5rem;
+  height: 2px;
+  width: 100%;
+  background: #664343;
+}
+
 .about__container__text span {
   color: rgb(55, 83, 0);
   font-weight: bold;
@@ -40,7 +54,7 @@
 
 .buttons__container {
   display: flex;
-  margin-top: 3rem;
+  margin-top: 2rem;
   gap: 1rem;
 }
 
@@ -100,8 +114,11 @@
   .about__image__container {
     width: 100%;
   }
- 
+
   .firstp {
     margin-top: 2rem;
+  }
+  .header__container h1 {
+    font-size: 1.8rem;
   }
 }

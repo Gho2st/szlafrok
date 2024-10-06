@@ -3,6 +3,8 @@ import "./globals.css";
 import { Montserrat } from "next/font/google";
 import Footer from "@/components/UI/Footer";
 
+//oswald
+
 const font = Montserrat({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700"],
