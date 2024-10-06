@@ -51,13 +51,17 @@ export default function Footer() {
             <ul>
               <li>
                 <div className={classes.contact__info__item}>
-                  <MdOutlineEmail />
+                  <div className={classes.contact__info__item__svg}>
+                    <MdOutlineEmail />
+                  </div>
                   <p> mbarciewicz@onet.eu</p>
                 </div>
               </li>
               <li>
                 <div className={classes.contact__info__item}>
-                  <IoLocationOutline />
+                  <div className={classes.contact__info__item__svg}>
+                    <IoLocationOutline />
+                  </div>
                   <p>Starowiślna 19, Kraków</p>
                 </div>
               </li>
@@ -65,7 +69,9 @@ export default function Footer() {
                 <div
                   className={`${classes.contact__info__item} ${classes.contact__form__link}`}
                 >
-                  <LuPhone />
+                  <div className={classes.contact__info__item__svg}>
+                    <LuPhone />
+                  </div>
                   <Link href="tel:+48124211860">+48 12 421 18 60 </Link>
                 </div>
               </li>
@@ -73,7 +79,9 @@ export default function Footer() {
                 <div
                   className={`${classes.contact__info__item} ${classes.contact__form__link}`}
                 >
-                  <GrContact />
+                  <div className={classes.contact__info__item__svg}>
+                    <GrContact />
+                  </div>
                   <Link href="/#kontakt">Formularz Kontaktowy</Link>
                 </div>
               </li>
