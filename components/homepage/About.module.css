@@ -111,7 +111,9 @@
   .about__image__container {
     width: 100%;
   }
-
+  .about__container__text {
+    padding-top: 2.5rem;
+  }
   .firstp {
     margin-top: 2rem;
   }

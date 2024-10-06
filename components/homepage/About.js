@@ -17,11 +17,10 @@ export default function About() {
               </h1>
             </div>
             <p className={classes.firstp}>
-              Szlafroki damskie, szlafroki męskie, szlafroki dziecięce, i nie
-              tylko... <br></br> <span>Od 1990r. </span> zapraszamy do naszego
-              specjalistycznego sklepu ze szlafrokami w Krakowie przy ulicy
-              Starowiślnej 19. Oprócz szlafroków w swojej ofercie posiadamy
-              również duży wybór piżam, koszuli nocnych, ręczników i pościeli.
+              <span>Od 1990r. </span> zapraszamy do naszego specjalistycznego
+              sklepu ze szlafrokami w Krakowie przy ulicy Starowiślnej 19.
+              Oprócz szlafroków w swojej ofercie posiadamy również duży wybór
+              piżam, koszuli nocnych, ręczników i pościeli.
             </p>
             <p>
               Jeżeli szukasz szlafroka w dobrej cenie i dużym wyborze, to
