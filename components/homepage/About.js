@@ -12,8 +12,8 @@ export default function About() {
             {/* <Header text="O Firmie" /> */}
             <div className={classes.header__container}>
               <h1>
-                SzlafrO.K. Szlafroki damskie, szlafroki męskie, szlafroki
-                dziecięce i nie tylko...
+                Szlafroki damskie, szlafroki męskie, szlafroki dziecięce i nie
+                tylko...
               </h1>
             </div>
             <p className={classes.firstp}>
