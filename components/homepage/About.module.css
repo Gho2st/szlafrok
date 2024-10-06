@@ -13,7 +13,7 @@
 .about__content__container {
   display: flex;
   justify-content: space-between;
-  gap: 5rem;
+  gap: 6rem;
 }
 
 .about__container__text {
@@ -25,7 +25,7 @@
 
 .header__container h1 {
   color: #664343;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 
 .header__container::after {
@@ -43,8 +43,7 @@
 }
 
 .about__container__text p {
-  margin-bottom: 2rem;
-  line-height: 2.3rem;
+  margin-bottom: 1.5rem;
   font-size: 1.2rem;
 }
 
@@ -54,7 +53,7 @@
 
 .buttons__container {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   gap: 1rem;
 }
 
@@ -62,14 +61,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: 2000px;
-  width: 30%;
+  width: 33%;
 }
 
 .about__image__container img {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 0.3rem;
-  transform: rotateY(-20deg);
 }
 
 @media (max-width: 1200px) {

@@ -10,7 +10,7 @@ export default function SliderComponent({ images }) {
     speed: 700,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3500,
     cssEase: "linear",
     initialSlide: 0,

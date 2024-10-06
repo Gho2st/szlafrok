@@ -1,14 +1,7 @@
 import Nav from "@/components/UI/Nav";
 import "./globals.css";
-import { Montserrat } from "next/font/google";
 import Footer from "@/components/UI/Footer";
 
-//oswald
-
-const font = Montserrat({
-  subsets: ["latin"],
-  weight: ["200", "300", "400", "500", "600", "700"],
-});
 export const metadata = {
   title: "SzlafrO.K. - Prezenty ślubne - szlafroki damskie, męskie",
   description:
@@ -32,7 +25,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pl">
-      <body className={font.className}>
+      <body>
         <Nav />
         {children}
         <Footer />
