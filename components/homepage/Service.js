@@ -28,11 +28,11 @@ export default function Service() {
   // Konfiguracja ustawień slidera
   const carouselSettings = {
     infinite: true,
-    speed: 700,
+    speed: 800,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3500,
+    autoplay: false,
+    autoplaySpeed: 5000,
     cssEase: "linear",
     initialSlide: 0,
     responsive: [
