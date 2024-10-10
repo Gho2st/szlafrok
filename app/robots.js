@@ -11,6 +11,6 @@ export default function robots() {
         disallow: ["/admin", "/privacy"],
       },
     ],
-    sitemap: `https://szlafrok.krakow.pl/sitemap.xml`,
+    sitemap: `https://www.szlafroki.krakow.pl/sitemap.xml`,
   };
 }
