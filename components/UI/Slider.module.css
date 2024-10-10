@@ -19,7 +19,6 @@
   padding: 1rem;
   border-radius: 2rem;
   width: 90% !important;
-  min-height: 520px !important;
 }
 
 @media (max-width: 1200px) {
