@@ -81,7 +81,13 @@ export default function Person(props) {
         )}
       </div>
       <div className={classes.exit__button}>
-        <button onClick={props.reset}>Zobacz resztę naszej oferty!</button>
+        <button
+          aria-label="Zobacz resztę naszej oferty"
+          type="button"
+          onClick={props.reset}
+        >
+          Zobacz resztę naszej oferty!
+        </button>
       </div>
     </>
   );

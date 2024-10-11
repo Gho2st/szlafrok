@@ -49,3 +49,9 @@
     width: 90% !important;
   }
 }
+
+@media (max-width: 600px) {
+  .container h2 {
+    font-size: 1.8rem;
+  }
+}
