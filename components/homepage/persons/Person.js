@@ -53,8 +53,9 @@ export default function Person(props) {
           <div className={classes.text__buttons__container}>
             <Button text="Kontakt" link="/" />
             <Button
-              text="Galeria"
-              link={`#galeria-${props.which}`}
+              text="Opinie"
+              // link={`#galeria-${props.which}`}
+              link="#opinie"
               background="#FFF0D1"
               color="black"
             />
@@ -71,13 +72,13 @@ export default function Person(props) {
         </div>
       </div>
       <div className={classes.gallery__container} id={`galeria-${props.which}`}>
-        {loading && <p>Ładowanie obrazów...</p>}
+        {loading && <p>Ładowanie zdjęć...</p>}
         {error && <p className={classes.error}>{error}</p>}
         {!loading && !error && images.length > 0 && (
           <SliderComponent images={images} />
         )}
         {!loading && !error && images.length === 0 && (
-          <p>Brak obrazów do wyświetlenia.</p>
+          <p>Brak zdjęć do wyświetlenia.</p>
         )}
       </div>
       <div className={classes.exit__button}>

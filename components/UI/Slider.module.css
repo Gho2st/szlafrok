@@ -52,6 +52,7 @@
 
 @media (max-width: 600px) {
   .container h2 {
-    font-size: 1.8rem;
+    /* font-size: 1.8rem; */
+    display: none;
   }
 }
