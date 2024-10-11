@@ -3,13 +3,14 @@ import Image from "next/image";
 import classes from "./Person.module.css";
 import Button from "@/components/UI/Button";
 import SliderComponent from "@/components/UI/Slider";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { BsArrowLeftSquare } from "react-icons/bs";
 
 export default function Person(props) {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const componentRef = useRef(null); // Ref do komponentu
 
   // Function to fetch images
   const fetchImages = async () => {
@@ -32,12 +33,13 @@ export default function Person(props) {
 
   // Use useEffect to fetch images on mount
   useEffect(() => {
+    componentRef.current?.scrollIntoView({ behavior: "smooth" }); // Przewija do komponentu
     fetchImages();
-  }, []);
+  }, [props.which]);
 
   return (
     <>
-      <div className={classes.container}>
+      <div className={classes.container} ref={componentRef}>
         <div className={classes.text__container}>
           <div className={classes.exit__container}>
             <button onClick={props.reset}>
@@ -77,6 +79,9 @@ export default function Person(props) {
         {!loading && !error && images.length === 0 && (
           <p>Brak obrazów do wyświetlenia.</p>
         )}
+      </div>
+      <div className={classes.exit__button}>
+        <button onClick={props.reset}>Zobacz resztę naszej oferty!</button>
       </div>
     </>
   );

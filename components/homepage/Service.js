@@ -1,10 +1,7 @@
 "use client";
-import "slick-carousel/slick/slick.css"; // Import Slick styles
-import "slick-carousel/slick/slick-theme.css"; // Import Slick theme styles
 import Image from "next/image";
 import classes from "./Service.module.css";
 import { useState } from "react";
-import Slider from "react-slick";
 import Person from "./persons/Person";
 
 export default function Service() {
@@ -23,44 +20,13 @@ export default function Service() {
     setIsManBathrobe(false);
     setIsWomanNightGown(false);
     setIsManPijamas(false);
-  }
 
-  // Konfiguracja ustawień slidera
-  const carouselSettings = {
-    infinite: true,
-    speed: 800,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+    // Przewinięcie do sekcji "Nasza oferta"
+    const ofertaSection = document.getElementById("nasza-oferta");
+    if (ofertaSection) {
+      ofertaSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
 
   return (
     <section className={classes.wrapper} id="nasza-oferta">
@@ -75,136 +41,134 @@ export default function Service() {
         !isManPijamas &&
         !isWomanNightgown ? (
           <div className={classes.service__content__container}>
-            <Slider {...carouselSettings} className={classes.slider}>
-              {/* Szlafroki damskie */}
-              <div className={classes.service__item__container}>
-                <div
-                  className={classes.service__item__image__container}
-                  onClick={() => setIsWomanBathrobe(true)}
-                >
-                  <Image
-                    src="/szlafroki-damskie.jpg"
-                    alt="Szlafroki damskie"
-                    width={100}
-                    height={100}
-                    layout="responsive"
-                  />
-                </div>
-                <div
-                  className={classes.button}
-                  onClick={() => setIsWomanBathrobe(true)}
-                >
-                  <h3>Szlafroki Damskie</h3>
-                </div>
+            {/* Szlafroki damskie */}
+            <div className={classes.service__item__container}>
+              <div
+                className={classes.service__item__image__container}
+                onClick={() => setIsWomanBathrobe(true)}
+              >
+                <Image
+                  src="/szlafroki-damskie.jpg"
+                  alt="Szlafroki damskie"
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                />
               </div>
+              <div
+                className={classes.button}
+                onClick={() => setIsWomanBathrobe(true)}
+              >
+                <h3>Szlafroki Damskie</h3>
+              </div>
+            </div>
 
-              {/* PIZAMY DAMSKIE */}
-              <div className={classes.service__item__container}>
-                <div
-                  className={classes.service__item__image__container}
-                  onClick={() => setIsWomanPijamas(true)}
-                >
-                  <Image
-                    src="/pizamy-damskie.jpg"
-                    alt="Piżamy damskie"
-                    width={100}
-                    height={100}
-                    layout="responsive"
-                  />
-                </div>
-                <div
-                  className={classes.button}
-                  onClick={() => setIsWomanPijamas(true)}
-                >
-                  <h3>Piżamy Damskie</h3>
-                </div>
+            {/* PIZAMY DAMSKIE */}
+            <div className={classes.service__item__container}>
+              <div
+                className={classes.service__item__image__container}
+                onClick={() => setIsWomanPijamas(true)}
+              >
+                <Image
+                  src="/pizamy-damskie.jpg"
+                  alt="Piżamy damskie"
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                />
               </div>
+              <div
+                className={classes.button}
+                onClick={() => setIsWomanPijamas(true)}
+              >
+                <h3>Piżamy Damskie</h3>
+              </div>
+            </div>
 
-              {/* Koszule Nocne */}
-              <div className={classes.service__item__container}>
-                <div
-                  className={classes.service__item__image__container}
-                  onClick={() => setIsWomanNightGown(true)}
-                >
-                  <Image
-                    src="/koszule-nocne-damskie.jpg"
-                    alt="Szlafroki damskie"
-                    width={100}
-                    height={100}
-                    layout="responsive"
-                  />
-                </div>
-                <div
-                  className={classes.button}
-                  onClick={() => setIsWomanNightGown(true)}
-                >
-                  <h3>Koszule Nocne</h3>
-                </div>
+            {/* Koszule Nocne */}
+            <div className={classes.service__item__container}>
+              <div
+                className={classes.service__item__image__container}
+                onClick={() => setIsWomanNightGown(true)}
+              >
+                <Image
+                  src="/koszule-nocne-damskie.jpg"
+                  alt="Szlafroki damskie"
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                />
               </div>
+              <div
+                className={classes.button}
+                onClick={() => setIsWomanNightGown(true)}
+              >
+                <h3>Koszule Nocne</h3>
+              </div>
+            </div>
 
-              {/* Szlafroki męskie */}
-              <div className={classes.service__item__container}>
-                <div
-                  onClick={() => setIsManBathrobe(true)}
-                  className={classes.service__item__image__container}
-                >
-                  <Image
-                    src="/szlafroki-meskie.jpg"
-                    alt="Szlafroki męskie"
-                    width={100}
-                    height={100}
-                    layout="responsive"
-                  />
-                </div>
-                <div
-                  className={classes.button}
-                  onClick={() => setIsManBathrobe(true)}
-                >
-                  <h3>Szlafroki Męskie</h3>
-                </div>
+            {/* Szlafroki męskie */}
+            <div className={classes.service__item__container}>
+              <div
+                onClick={() => setIsManBathrobe(true)}
+                className={classes.service__item__image__container}
+              >
+                <Image
+                  src="/szlafroki-meskie.jpg"
+                  alt="Szlafroki męskie"
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                />
               </div>
-              {/* Piżamy meskie */}
+              <div
+                className={classes.button}
+                onClick={() => setIsManBathrobe(true)}
+              >
+                <h3>Szlafroki Męskie</h3>
+              </div>
+            </div>
+            {/* Piżamy meskie */}
 
-              <div className={classes.service__item__container}>
-                <div
-                  onClick={() => setIsManPijamas(true)}
-                  className={classes.service__item__image__container}
-                >
-                  <Image
-                    src="/pizamy-meskie.jpg"
-                    alt="Piżamy męskie"
-                    width={100}
-                    height={100}
-                    layout="responsive"
-                  />
-                </div>
-                <div
-                  className={classes.button}
-                  onClick={() => setIsManPijamas(true)}
-                >
-                  <h3>Piżamy Męskie</h3>
-                </div>
+            <div className={classes.service__item__container}>
+              <div
+                onClick={() => setIsManPijamas(true)}
+                className={classes.service__item__image__container}
+              >
+                <Image
+                  src="/pizamy-meskie.jpg"
+                  alt="Piżamy męskie"
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                />
               </div>
+              <div
+                className={classes.button}
+                onClick={() => setIsManPijamas(true)}
+              >
+                <h3>Piżamy Męskie</h3>
+              </div>
+            </div>
 
-              {/* Szlafroki dziecięce */}
-              <div className={classes.service__item__container}>
-                <div
-                  className={classes.service__item__image__container}
-                  onClick={() => setIsKids(true)}
-                >
-                  <Image
-                    src="/dla-dzieci.jpg"
-                    alt="Szlafroki i pizamy dziecięce"
-                    width={100}
-                    height={100}
-                    layout="responsive"
-                  />
-                </div>
-                <div className={classes.button} onClick={() => setIsKids(true)}>
-                  <h3>Dla Dzieci</h3>
-                </div>
+            {/* Szlafroki dziecięce */}
+            <div className={classes.service__item__container}>
+              <div
+                className={classes.service__item__image__container}
+                onClick={() => setIsKids(true)}
+              >
+                <Image
+                  src="/dla-dzieci.jpg"
+                  alt="Szlafroki i pizamy dziecięce"
+                  width={100}
+                  height={100}
+                  layout="responsive"
+                />
               </div>
-            </Slider>
+              <div className={classes.button} onClick={() => setIsKids(true)}>
+                <h3>Dla Dzieci</h3>
+              </div>
+            </div>
           </div>
         ) : (
           /* Sekcja po wybraniu opcji np. szlafroki damskie */

@@ -60,6 +60,31 @@
   border-radius: 1rem;
 }
 
+.exit__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.exit__button button {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 1.3rem 2rem;
+  background: #e7cccc;
+  border: 0;
+  border-radius: 0.6rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.exit__button button:hover {
+  cursor: pointer;
+  background: #dbc8c8;
+}
+
 @media (max-width: 1200px) {
   .container {
     margin-top: 0rem;
@@ -93,7 +118,17 @@
 }
 
 @media (max-width: 600px) {
+  .exit__container button {
+    transform: translateY(5px);
+  }
   .gallery__container {
     text-align: center;
+  }
+  .exit__button {
+    margin-top: 2rem;
+  }
+  .exit__button button {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
   }
 }
