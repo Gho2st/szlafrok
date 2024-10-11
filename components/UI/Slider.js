@@ -20,7 +20,7 @@ export default function SliderComponent({ images }) {
         breakpoint: 1500,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           infinite: true,
         },
       },
