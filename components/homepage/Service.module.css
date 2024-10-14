@@ -52,6 +52,7 @@
 
 .service__item__image__container img {
   border-radius: 0.6rem;
+  min-height: 660px;
   object-fit: cover;
 }
 
@@ -79,13 +80,13 @@
   min-height: 100vh;
 }
 
-@media (max-width: 1400px) {
-  .service__content__container {
-    margin-top: 4rem;
+@media (max-width: 1500px) {
+  .service__item__image__container img {
+    min-height: 620px;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .service__content__container {
     margin-top: 4rem;
     gap: 2rem;
@@ -130,8 +131,7 @@
     padding: 1rem;
   }
   .service__item__image__container img {
-    border-radius: 0.6rem;
-    object-fit: cover;
+    min-height: 0;
   }
 
   .service__container__header::after {
