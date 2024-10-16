@@ -64,7 +64,8 @@
   margin-right: 1rem;
 }
 
-.contact__info__item p, .contact__info__item a {
+.contact__info__item p,
+.contact__info__item a {
   display: flex;
   justify-content: center;
   align-items: center;

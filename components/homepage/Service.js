@@ -210,7 +210,7 @@ export default function Service() {
               <Person
                 person="Szlafroki i piżamy dziecięce"
                 which="dla-dzieci"
-                text="Oto przykłady szlafroków i piżam dziecięcych z naszej oferty. Od 8 lat do 164 cm wzrostu, w dniach bożonarodzeniowych zestawy piżam dla całej rodziny."
+                text="Oto przykłady szlafroków i piżam dziecięcych z naszej oferty. Od 8 lat do 164 cm wzrostu, w okresie bożonarodzeniowym zestawy piżam dla całej rodziny."
                 text2="Wszystkie w bogatej ofercie kolorystycznej."
                 text3="Dostępne zestawy dla całej rodziny!"
                 reset={reset}
@@ -220,7 +220,7 @@ export default function Service() {
               <Person
                 which="pizamy-damskie"
                 person="Piżamy Damskie"
-                text="Oto przykłady piżam damskich z naszej oferty. Z bawełny (rozpinane lub nie), wiskozy oraz w dniach zimowych z thermofrotte. Rozmiary od S do 5XL."
+                text="Oto przykłady piżam damskich z naszej oferty. Z bawełny (rozpinane lub nie), wiskozy oraz w okresie jesienno-zimowym z thermofrotte. Rozmiary od S do 5XL."
                 text2="Wszystkie w bogatej ofercie kolorystycznej."
                 text3="Do każdej piżamy można dobrać odpowiedni szlafrok oraz koszulę nocną!"
                 reset={reset}
@@ -232,7 +232,7 @@ export default function Service() {
                 person="Damskie Koszule Nocne"
                 text="Oto przykłady damskich koszul nocnych z naszej oferty. Koszule nocne z długim lub krótkim rękawem z bawełny, wiskozy i tkaniny termosoft."
                 text2="Wszystkie w bogatej ofercie kolorystycznej."
-                text3="Do każdej koszuli nocncej można dobrać odpowiednią piżamę oraz szlafrok!"
+                text3="Do każdej koszuli nocnej można dobrać odpowiednią piżamę oraz szlafrok!"
                 reset={reset}
               />
             )}

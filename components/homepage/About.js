@@ -20,10 +20,10 @@ export default function About() {
               <span>Od 1990r. </span> zapraszamy do naszego specjalistycznego
               sklepu ze szlafrokami w Krakowie przy ulicy Starowiślnej 19.
               Oprócz szlafroków w swojej ofercie posiadamy również duży wybór
-              piżam, koszuli nocnych, ręczników i pościeli.
+              piżam, koszul nocnych, piżam i szlafroków dla dzieci.
             </p>
             <p>
-              Jeżeli szukasz szlafroka w dobrej cenie i dużym wyborze, to
+              Jeżeli szukasz tych artykułów w dobrej cenie i dużym wyborze, to
               zapraszamy do nas!
             </p>
             <p>

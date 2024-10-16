@@ -92,7 +92,10 @@ export default function Reviews() {
           opinii, które są dla nas najlepszą rekomendacją.
         </p>
         <div className={classes.buttonContainer}>
-          <Button link="https://g.page/r/CcPF4QJuJH_3EBM/review" text="Zostaw Opinię" />
+          <Button
+            link="https://g.page/r/CcPF4QJuJH_3EBM/review"
+            text="Zostaw Opinię"
+          />
         </div>
         <div className={classes.reviewContainer}>
           <Slider {...settings} className={classes.slider}>
@@ -140,6 +143,100 @@ export default function Reviews() {
                 </p>
                 <div className={classes.line}></div>
                 <p className={classes.name}>Maciej B</p>
+              </div>
+            </div>
+            <div className={classes.reviewItem}>
+              <div className={classes.review}>
+                <div>
+                  <Stars />
+                </div>
+                <p>
+                  W sklepie jest bardzo duży wybór szlafroków. Obsługa jest
+                  bardzo miła i widać, że doskonale znają swój asortyment. Już
+                  dwa razy kupiłam idealnie trafiony prezent - idealne
+                  dopasowanie rozmiarów i kolorów. Z czystym sumieniem mogę
+                  polecić ten sklep każdemu kto szuka dobrej jakości produktów.
+                  Sama na pewno będę do nich wracać.
+                </p>
+                <div className={classes.line}></div>
+                <p className={classes.name}>Karolina Główka</p>
+              </div>
+            </div>
+            <div className={classes.reviewItem}>
+              <div className={classes.review}>
+                <div>
+                  <Stars />
+                </div>
+                <p>
+                  Świetna lokalizacja sklepu! Bardzo duży wybór szlafroków i
+                  bielizny nocnej. Świetna jakość produktów. Miła, profesjonalna
+                  obsługa. Chętnie wracam do tego sklepu.
+                </p>
+                <div className={classes.line}></div>
+                <p className={classes.name}>Monika</p>
+              </div>
+            </div>
+            <div className={classes.reviewItem}>
+              <div className={classes.review}>
+                <div>
+                  <Stars />
+                </div>
+                <p>
+                  Z całego serca polecam sklep. Przemiła Pani która doradzi w
+                  wyborze. Jakość wysoka, piękne wzory. To już kolejne zakupy na
+                  przestrzeni wielu lat.
+                </p>
+                <div className={classes.line}></div>
+                <p className={classes.name}>Katarzyna Mączka</p>
+              </div>
+            </div>
+            <div className={classes.reviewItem}>
+              <div className={classes.review}>
+                <div>
+                  <Stars />
+                </div>
+                <p>
+                  Jestem przemile zaskoczona – fantastyczna jakość, chyba
+                  najlepsza obsługa jakiej doświadczyłam, naprawdę atrakcyjne
+                  ceny. Kupiłam tu dokładnie taki szlafrok, o jakim marzyłam. Od
+                  teraz to moje ulubione miejsce z pomysłami na prezent.
+                </p>
+                <div className={classes.line}></div>
+                <p className={classes.name}>Gabriela Mazurkiewicz</p>
+              </div>
+            </div>
+            <div className={classes.reviewItem}>
+              <div className={classes.review}>
+                <div>
+                  <Stars />
+                </div>
+                <p>
+                  Kupiłem szlafrok na prezent urodzinowy. Bardzo miła i
+                  profesjonalna obsługa. Można zobaczyć różne szlafroki,
+                  sprawdzić materiał w dotyku (co nie jest możliwe przez
+                  internet). Bardzo polecam.
+                </p>
+                <div className={classes.line}></div>
+                <p className={classes.name}>Jakub</p>
+              </div>
+            </div>
+            <div className={classes.reviewItem}>
+              <div className={classes.review}>
+                <div>
+                  <Stars />
+                </div>
+                <p>
+                  Rewelacja w kazdym detalu. Potrzebowałam dużego rozmiaru
+                  piżam, z czym byl w całym Krakowie kłopot, i tylko tam byly.
+                  Co wiecej, najpierw kupilam 1 piżamę, a potem właściciel
+                  rozmawiał z hurtownia i zamówił specjalnie kolejne 2, a kiedy
+                  byly juz w sklepie zadzwonił do domu z informacja, ze juz sa
+                  do odebrania. Piżamy sa swietne gatunkowo, i bardzo ładne.
+                  Obsługa przemiła, nastawiona na klienta, z przyjemnością tam
+                  zrobilam zakupy. Gorąco polecam.
+                </p>
+                <div className={classes.line}></div>
+                <p className={classes.name}>Hart Dental</p>
               </div>
             </div>
           </Slider>
