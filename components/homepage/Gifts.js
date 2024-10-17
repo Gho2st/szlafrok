@@ -12,9 +12,8 @@ export default function Gifts() {
             <Header text="Prezenty" />
             <p className={classes.firstp}>
               Jeżeli nie macie Państwo pomysłu na oryginalny i praktyczny
-              prezent- oto komplet szlafroków z ręcznikami lub bez. Zestaw
-              dobieramy w zależności od preferencji przyszłych użytkowników (np.
-              koloru łazienki).
+              prezent- oto komplet szlafroków. Zestaw dobieramy w zależności od
+              preferencji przyszłych użytkowników (np. koloru łazienki).
             </p>
             <p>
               Na życzenie istnieje możliwość wyhaftowania monogramu na
