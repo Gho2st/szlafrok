@@ -44,7 +44,7 @@
 }
 
 .service__item__image__container {
-  width: 90%;
+  width: 100%;
 }
 .service__item__image__container:hover {
   cursor: pointer;
@@ -84,22 +84,22 @@
   .service__item__image__container img {
     min-height: 620px;
   }
+  .service__content__container {
+    gap: 2rem;
+  }
 }
 
 @media (max-width: 1400px) {
   .service__content__container {
     margin-top: 4rem;
-    gap: 2rem;
   }
-  .service__item__image__container {
-    width: 100%;
-  }
+
   .service__container__header {
     font-size: 2.5rem;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .service__content__container {
     grid-template-columns: 1fr 1fr;
   }
@@ -115,11 +115,7 @@
   }
 }
 
-@media (max-width: 600px) {
-  .service__item__image__container {
-    width: 100%;
-  }
-
+@media (max-width: 900px) {
   .service__container {
     padding: 4rem 9%;
   }

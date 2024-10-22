@@ -69,11 +69,17 @@
   border-radius: 0.3rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1500px) {
   .about__container__text p {
     line-height: 2rem;
     font-size: 1.1rem;
   }
+  .about__image__container {
+    width: 42%;
+  }
+}
+
+@media (max-width: 1200px) {
   .about__image__container {
     width: 50%;
   }
