@@ -19,7 +19,7 @@ export default function Nav() {
   };
 
   return (
-    <div className={classes.nav__wrapper}>
+    <nav className={classes.nav__wrapper}>
       <div className={classes.nav__container}>
         <div className={classes.logo__container}>
           <Link href="/" onClick={closeMenu}>
@@ -119,6 +119,6 @@ export default function Nav() {
           </li>
         </ul>
       </motion.div>
-    </div>
+    </nav>
   );
 }
