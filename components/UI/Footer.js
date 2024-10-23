@@ -35,6 +35,11 @@ export default function Footer() {
               <li>
                 <Link href="/#kontakt">Kontakt</Link>
               </li>
+              <li>
+                <a href="/polityka_prywatnosci_szlafrok.pdf" target="_blank">
+                  Polityka Prywatności
+                </a>
+              </li>
             </ul>
           </div>
           <address>
