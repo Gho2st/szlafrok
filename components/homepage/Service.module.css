@@ -80,6 +80,12 @@
   min-height: 100vh;
 }
 
+@media (min-width: 1600px) {
+  .service__item__image__container img {
+    min-height: 750px;
+  }
+}
+
 @media (max-width: 1500px) {
   .service__item__image__container img {
     min-height: 620px;

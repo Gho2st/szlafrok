@@ -82,7 +82,7 @@ export default function Reviews() {
             className={classes.counter}
             style={{ display: "inline-block" }}
           >
-            {rounded === 0 ? 66 : rounded}
+            {rounded === 0 ? 67 : rounded}
           </motion.div>{" "}
           zadowolonych klientów! Ocena <span>4.9/5</span>!
         </h2>
