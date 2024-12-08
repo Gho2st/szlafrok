@@ -7,6 +7,8 @@ import Button from "../UI/Button";
 import Link from "next/link";
 import { useState } from "react";
 import ButtonSubmit from "../UI/ButtonSubmit";
+import { useRef } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
   const [text, setText] = useState("");
@@ -16,6 +18,7 @@ export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState(null);
   const [errorFields, setErrorFields] = useState([]);
+  const recaptchaRef = useRef(null); // Ref dla reCAPTCHA
 
   const sendMail = async (e) => {
     e.preventDefault();
@@ -35,6 +38,15 @@ export default function Contact() {
       return;
     }
 
+    // Pobranie tokena reCAPTCHA
+    const recaptchaToken = recaptchaRef.current.getValue();
+    if (!recaptchaToken) {
+      setFormError("Proszę zaznacz, że nie jesteś robotem przed wysłaniem.");
+      return;
+    }
+
+    // console.log("Wysyłanie danych:", { ...formData, recaptchaToken }); // Dodaj logowanie danych
+
     try {
       const response = await fetch("/api/send-email", {
         method: "POST",
@@ -46,6 +58,7 @@ export default function Contact() {
           fullName,
           email,
           phoneNumber,
+          recaptchaToken,
         }),
       });
 
@@ -58,6 +71,7 @@ export default function Contact() {
         setText("");
         setPhoneNumber("");
         onFormSubmit();
+        recaptchaRef.current.reset(); // Zresetuj CAPTCHA po wysłaniu
       } else {
         const errorData = await response.json();
         setFormError(`Error: ${errorData.message}`);
@@ -135,6 +149,11 @@ export default function Contact() {
                 />
               </div>
               {formError && <p className={classes.errorMessage}>{formError}</p>}
+              <ReCAPTCHA
+                className="mt-4"
+                ref={recaptchaRef}
+                sitekey="6LetqpUqAAAAABRwX_slcBybtlkC7S4X4QZZEYUo" // Wstaw swój Site Key
+              />
               <div
                 className={classes.contact__container__form__button__container}
               >
