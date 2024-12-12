@@ -48,6 +48,15 @@ export default function Footer() {
               <ul>
                 <li>poniedziałek - piatęk: 10-18</li>
                 <li>soboty: 10-14</li>
+                <br></br>
+                <li>(13.12): 10-19 </li>
+                <li>(14.12): 10-17 </li>
+                <li>(15.12): 10-14 </li>
+                <li>(16.12-20.12): 10-19 </li>
+                <li>(21.12): 10-17 </li>
+                <li>(22.12): 10-17 </li>
+                <li>(23.12): 10-19 </li>
+                <li>(24.12): 10-14 </li>
               </ul>
             </div>
           </address>
