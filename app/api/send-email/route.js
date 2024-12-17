@@ -58,6 +58,7 @@ export async function POST(request) {
     const mailOption = {
       from: "biosite.praca@gmail.com",
       to: "mbarciewicz@onet.eu",
+      replyTo: email, // Adres e-mail klienta podany w formularzu
       subject: "Email ze strony SzlafrOK od klienta",
       html: `
         <div style="font-family: Arial, sans-serif; color: #333; padding: 20px;">
