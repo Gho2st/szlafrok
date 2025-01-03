@@ -96,7 +96,7 @@ export default function Footer() {
         <div className={classes.foot}>
           <p>
             @ 2024 SzlafrO.K. Projekt i realizacja{" "}
-            <Link href="https://dominikjojczyk.pl/">Dominik</Link>
+            <Link href="https://domiweb.pl/">Domiweb</Link>
           </p>
         </div>
       </div>
