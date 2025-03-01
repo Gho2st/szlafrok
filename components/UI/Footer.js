@@ -47,9 +47,7 @@ export default function Footer() {
               <h3>Godziny otwarcia</h3>
               <ul>
                 <li>poniedziałek - piatęk: 10-18</li>
-                <li>*od 24.02 do 28.02: 11-17</li>
                 <li>soboty: 10-14</li>
-                <li>*sobota 22.02 nieczynne</li>
               </ul>
             </div>
           </address>
