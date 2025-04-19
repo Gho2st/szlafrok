@@ -94,10 +94,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={classes.foot}>
-          <p>
-            @ 2024 SzlafrO.K. Projekt i realizacja{" "}
-            <Link href="https://domiweb.pl/">Domiweb</Link>
-          </p>
+          <p>@ 2024 SzlafrO.K.</p>
         </div>
       </div>
     </footer>
