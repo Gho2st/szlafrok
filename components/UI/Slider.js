@@ -1,59 +1,41 @@
-import "slick-carousel/slick/slick.css"; // Import Slick styles
-import "slick-carousel/slick/slick-theme.css"; // Import Slick theme styles
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import classes from "./Slider.module.css";
 import Slider from "react-slick";
 import Image from "next/image";
 
 export default function SliderComponent({ images }) {
-  const carouselSettings = {
+  const settings = {
+    dots: false,
     infinite: true,
-    speed: 700,
+    speed: 600,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
-    initialSlide: 0,
-
+    arrows: true,
     responsive: [
-      {
-        breakpoint: 1500,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 680,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
+      { breakpoint: 1400, settings: { slidesToShow: 3 } },
+      { breakpoint: 900, settings: { slidesToShow: 2 } },
+      { breakpoint: 600, settings: { slidesToShow: 1 } },
     ],
   };
+
   return (
     <div className={classes.container}>
-      <h2>Obejrzyj Naszą Galerię</h2>
-      <Slider {...carouselSettings} className={classes.slider}>
-        {images.map((image, index) => (
-          <Image
-            key={index}
-            src={image.imageUrl}
-            height={image.height || 550}
-            width={image.width || 450}
-            layout="responsive"
-            alt={image.alt}
-          />
+      <h2>Obejrzyj Naszą Galerię</h2>.
+      <Slider {...settings} className={classes.slider}>
+        {images.map((img, i) => (
+          <div key={i} className={classes.slide}>
+            <Image
+              src={img.imageUrl}
+              alt={img.alt || `Modelka w piżamie / szlafroku ${i + 1}`}
+              width={480}
+              height={650} // proporcja ok. 3:4 – idealna dla modelek pełna sylwetka
+              priority={i < 4} // tylko pierwsze 4 ładują się od razu (szybkość!)
+              quality={85}
+              className={classes.img}
+            />
+          </div>
         ))}
       </Slider>
     </div>
