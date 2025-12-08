@@ -46,8 +46,10 @@ export default function Footer() {
             <div>
               <h3>Godziny otwarcia</h3>
               <ul>
-                <li>poniedziałek - piatęk: 10-18</li>
-                <li>soboty: 10-14</li>
+                <li>poniedziałek - piatęk: 10-19</li>
+                <li>sobota: 10-16</li>
+                <li>niedziela 14.12: 10-14</li>
+                <li>niedziela 21.12: 10-18</li>
               </ul>
             </div>
           </address>
@@ -94,7 +96,7 @@ export default function Footer() {
           </div>
         </div>
         <div className={classes.foot}>
-          <p>@ 2024 SzlafrO.K.</p>
+          <p>@ 2025 SzlafrO.K.</p>
         </div>
       </div>
     </footer>
