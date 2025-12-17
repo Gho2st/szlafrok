@@ -50,6 +50,7 @@ export default function Footer() {
                 <li>sobota: 10-16</li>
                 <li>niedziela 14.12: 10-14</li>
                 <li>niedziela 21.12: 10-18</li>
+                <li>wigilia 24.12: 10-14</li>
               </ul>
             </div>
           </address>
