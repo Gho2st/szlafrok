@@ -2,49 +2,65 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: auto;
-  min-height: 100vh;
+  width: 100%;
+  padding: 2rem 6%;
 }
 
 .about__container {
-  padding: 6rem 9%;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 6rem 5%;
 }
 
 .about__content__container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 6rem;
 }
 
 .about__container__text {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 70%;
+  flex: 1;
+  max-width: 720px;
 }
 
+.about__image__container {
+  flex: 0 0 38%;
+  max-width: 520px;
+  display: flex;
+  justify-content: center;
+}
+
+.about__image__container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+/* Nagłówek */
 .header__container h1 {
   color: #664343;
-  font-size: 2.2rem;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 1.8rem;
 }
 
 .header__container::after {
   content: "";
   display: block;
-  margin-top: 1.5rem;
-  height: 2px;
-  width: 100%;
+  margin-top: 1.8rem;
+  height: 3px;
+  width: 90px;
   background: #664343;
 }
 
-.about__container__text span {
-  color: rgb(55, 83, 0);
-  font-weight: bold;
-}
-
 .about__container__text p {
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
 }
 
 .firstp {
@@ -53,77 +69,43 @@
 
 .buttons__container {
   display: flex;
-  margin-top: 1.5rem;
-  gap: 1rem;
+  gap: 1.2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
-.about__image__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 33%;
-}
-
-.about__image__container img {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  border-radius: 0.3rem;
-}
-
-@media (max-width: 1500px) {
-  .about__container__text p {
-    line-height: 2rem;
-    font-size: 1.1rem;
-  }
-  .about__image__container {
-    width: 42%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .about__image__container {
-    width: 50%;
-  }
-}
-
+/* ====================== MOBILE ====================== */
 @media (max-width: 900px) {
   .about__content__container {
-    display: flex;
     flex-direction: column;
-    gap: 0rem;
+    gap: 3.5rem;
   }
-  .buttons__container {
-    margin-top: 0rem;
-  }
+
+  .about__container__text,
   .about__image__container {
     width: 100%;
-    margin: auto;
+    max-width: 100%;
   }
-  .about__image__container img {
-    transform: rotateY(0);
-    border-radius: 0;
+
+  .about__image__container {
+    justify-content: center;
   }
-  .about__container__text {
-    width: 100%;
-  }
+
   .about__container {
-    padding: 0;
+    padding: 4rem 6%;
   }
-  .about__container__text {
-    padding: 4rem 9%;
+
+  .header__container h1 {
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 600px) {
-  .about__image__container {
-    width: 100%;
+  .about__container {
+    padding: 3rem 5%;
   }
-  .about__container__text {
-    padding-top: 2.5rem;
-  }
-  .firstp {
-    margin-top: 2rem;
-  }
-  .header__container h1 {
-    font-size: 1.8rem;
+
+  .about__container__text p {
+    font-size: 1.1rem;
   }
 }

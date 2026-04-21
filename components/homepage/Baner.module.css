@@ -1,15 +1,23 @@
 .baner__container {
   position: relative;
-  min-height: 100vh;
-  overflow: hidden;
   width: 100%;
-  height: 100%;
-  background: url("/baner2.jpeg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: top;
+  overflow: hidden;
+
+  aspect-ratio: 9 / 14;
+  background: url("/mobile-baner.jpeg") no-repeat center top;
+  background-size: cover;
 }
 
+/* Na desktopie i większych ekranach – poziome zdjęcie + pozioma proporcja */
+@media (min-width: 769px) {
+  .baner__container {
+    aspect-ratio: 16 / 9;
+    background-image: url("/desktop-baner.jpg");
+    background-position: center top;
+  }
+}
+
+/* Tekst – zostawiam prawie bez zmian */
 .baner__text__container {
   position: absolute;
   top: 50%;
@@ -32,43 +40,24 @@
   margin-top: 2rem;
 }
 
+/* Responsywność tekstu */
 @media (max-width: 1200px) {
-  .baner__container {
-    background-size: 140%;
-    background-repeat: no-repeat;
-    background-position: top;
-  }
   .baner__text__container {
     width: 40%;
     padding: 2rem 1.5rem;
   }
   .baner__text__container h1 {
     font-size: 1.3rem;
-    padding: 0rem;
     margin-top: 1rem;
   }
 }
 
-@media (max-width: 600px) {
-  .baner__container {
-    background-size: 140%;
-    background-repeat: no-repeat;
-    background-position: top;
-  }
+@media (max-width: 768px) {
   .baner__text__container {
     width: 85%;
-    padding: 2rem 1.5rem;
-    top: 85%;
+    padding: 1.8rem 1.2rem;
   }
   .baner__text__container h1 {
-    font-size: 1.3rem;
-    padding: 0rem;
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .baner__container {
-    background-size: 160%;
+    font-size: 1.25rem;
   }
 }
