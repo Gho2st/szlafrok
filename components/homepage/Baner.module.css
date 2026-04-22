@@ -8,7 +8,7 @@
   background-size: cover;
 }
 
-/* Na desktopie i większych ekranach – poziome zdjęcie + pozioma proporcja */
+/* ====================== DESKTOP ====================== */
 @media (min-width: 769px) {
   .baner__container {
     aspect-ratio: 16 / 9;
@@ -17,47 +17,55 @@
   }
 }
 
-/* Tekst – zostawiam prawie bez zmian */
+/* ====================== TEKST NA BANERZE ====================== */
 .baner__text__container {
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 1rem;
-  color: black;
-  width: 30%;
+  transform: translateX(-50%);
+
+  /* Tekst na dole na telefonie */
+  bottom: 8%;
+  width: 85%;
+
   background: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: 2rem 2rem;
+  padding: 1.8rem 1.4rem;
   z-index: 2;
+  text-align: center;
 }
 
 .baner__text__container h1 {
   font-size: 1.35rem;
-  padding: 0.5rem;
   font-weight: 500;
-  text-align: center;
-  margin-top: 2rem;
+  margin: 0;
+  padding: 0.3rem 0;
 }
 
-/* Responsywność tekstu */
-@media (max-width: 1200px) {
+/* ====================== DESKTOP - tekst na środku ====================== */
+@media (min-width: 769px) {
   .baner__text__container {
-    width: 40%;
-    padding: 2rem 1.5rem;
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: 38%;
+    padding: 2.2rem 2rem;
   }
+
   .baner__text__container h1 {
-    font-size: 1.3rem;
-    margin-top: 1rem;
+    font-size: 1.6rem;
   }
 }
 
-@media (max-width: 768px) {
+/* ====================== MAŁE TELEFONY ====================== */
+@media (max-width: 480px) {
   .baner__text__container {
-    width: 85%;
-    padding: 1.8rem 1.2rem;
+    bottom: 6%;
+    width: 88%;
+    padding: 1.6rem 1.2rem;
   }
+
   .baner__text__container h1 {
-    font-size: 1.25rem;
+    font-size: 1.28rem;
   }
 }
